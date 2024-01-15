@@ -3,26 +3,25 @@ body {
     margin: 0 auto;
     padding: 0;
     display: grid;
-    align-items: center;
+    align-content: center;
+    /* align-items: center; */
     justify-content: center;
     min-height: 100vh;
 }
 
 h1 {
     color: rgb(175, 0, 130);
-    text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 72px;
     text-transform: uppercase;
-    margin: 0 auto;
+    text-align: center;
 }
 
 h2 {
     color: rgb(175, 0, 130);
-    text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 32px;
-    margin: 0px;
+    text-align: center;
 }
 
 p {
@@ -30,7 +29,7 @@ p {
     font-family: 'Courier New', Courier, monospace;
     max-width: 30em;
     margin: 0 auto;
-    }
+}
 
 ul {
     font-family: 'Courier New', Courier, monospace;
