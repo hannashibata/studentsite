@@ -1,47 +1,129 @@
+/* GLOBAL RESET */
+* { box-sizing: border-box; }
+body { margin: 0; }
+
+/* GLOBAL COLORS */
+body { background-color: rgb(225, 225, 225); }
+a {
+    color: rgb(46, 46, 46); 
+    text-decoration: none;
+}
+a:hover {color: rgba(255, 255, 255, 0.5);}
+
+/* GLOBAL STRUCTURE */
 body {
-    background: rgb(255, 159, 0);
-    margin: 0 auto;
-    padding: 0;
     display: grid;
-    align-content: center;
-    /* align-items: center; */
-    justify-content: center;
+    grid-template-rows: auto 1fr auto;
     min-height: 100vh;
 }
 
-h1 {
-    color: rgb(175, 0, 130);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 72px;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-h2 {
-    color: rgb(175, 0, 130);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 32px;
-    text-align: center;
-}
-
-p {
+/* GLOBAL TYPOGRAPHY */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 88.75%;  /* 14pt */
+    line-height: 1.4; 
     color: black;
-    font-family: 'Courier New', Courier, monospace;
-    max-width: 30em;
-    margin: 0 auto;
+    text-decoration: none;
 }
 
-ul {
-    font-family: 'Courier New', Courier, monospace;
-    text-align: left;
-    margin: 0 auto;
+/* HEADER */
+header { 
+    background-color: rgb(252, 15, 192, 1);
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* MAIN */
+main {
+    background-color: white;  
+    padding-bottom: 20px;
+}
+
+
+/* SITE ID */
+.site-id h1 {
+    margin: 0;
+}
+
+.site-nav ul {
+    display: flex;
+    justify-content: flex-end; 
+    margin: 0;
     padding: 0;
+    list-style: none;
 }
 
-a {
-    color: white;
+.site-nav a {
+    display: block;
+    padding: 1em;
 }
 
-/* h1, h2, p, ul {
-    background-color: teal;
-} */
+/* FOOTER */
+footer {
+    background-color: rgba(0, 255, 0, 1);
+    margin: 0;
+    padding: 1em;
+}
+
+/* SOCIAL NAV */
+.social-nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.social-nav a {
+    display: block;
+    padding: 1em;
+}
+
+/* HERO SECTION */
+.hero {
+    background-color: white; 
+    text-align: center;
+    color: black;
+    padding: 6em 1em;
+}
+
+.hero h2 {
+    font-size: 6em;
+    color: black;
+    line-height: 1;
+    text-transform: uppercase;
+    margin: 0 auto;
+}
+
+.hero p {
+    max-width: 40em;
+    margin: 1em auto;
+}
+
+ /* COURSE SECTION */
+ .courses {
+    padding: 6em 1em;
+    display: grid;
+    justify-content: center;
+ }
+
+ .courses ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+ }
+
+ .courses h3 {
+    color: black;
+    text-align: center;
+ }
+
+
+/* FOR WEB DEV PURPOSES ONLY */
+/* this is to see blocks */
+body * {
+    background-color: rgba(0,0,0,.05);
+    border: 1px solid rgba(0,0,0,.1);
+    color: rgba(0,0,0,.5);
+}
