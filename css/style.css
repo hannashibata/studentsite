@@ -135,6 +135,17 @@ footer {
     text-align: center;
  }
 
+ /* COURSE PAGES WITH MULTIPLE PROJECT LISTS */
+ .coursework{
+    padding: 3em 1em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+ }
+
+ .project {
+    margin: 2em;
+ }
 
 /* FOR WEB DEV PURPOSES ONLY */
 /* this is to see blocks */
