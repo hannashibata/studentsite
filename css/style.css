@@ -4,10 +4,7 @@ body { margin: 0; }
 
 /* GLOBAL COLORS */
 body { background-color: rgb(225, 225, 225); }
-a {
-    color: rgb(46, 46, 46); 
-    text-decoration: none;
-}
+a { color: rgb(20, 20, 20, 1); }
 a:hover {color: rgba(255, 255, 255, 0.5);}
 
 /* GLOBAL STRUCTURE */
@@ -32,31 +29,44 @@ header {
     padding: 1em;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: center;
 }
 
-/* MAIN */
-main {
-    background-color: white;  
-    padding-bottom: 20px;
+header a {
+    color: rgb(20, 20, 20, 1);
+    text-decoration: none;
 }
 
+header a:hover {
+    color: rgba(255, 255, 255, 0.5);
+}
 
 /* SITE ID */
 .site-id h1 {
     margin: 0;
 }
 
+/* SITE NAV */
 .site-nav ul {
     display: flex;
-    justify-content: flex-end; 
+    justify-content: flex-end;
+    list-style: none; 
     margin: 0;
     padding: 0;
-    list-style: none;
 }
 
 .site-nav a {
     display: block;
     padding: 1em;
+}
+
+/* MAIN */
+main {
+    background-color: white;  
+}
+
+section {
+    padding: 3em, 1em;
 }
 
 /* FOOTER */
@@ -68,11 +78,11 @@ footer {
 
 /* SOCIAL NAV */
 .social-nav ul {
-    margin: 0;
-    padding: 0;
     display: flex;
     justify-content: center;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .social-nav a {
@@ -122,8 +132,8 @@ footer {
 
 /* FOR WEB DEV PURPOSES ONLY */
 /* this is to see blocks */
-body * {
+/* body * {
     background-color: rgba(0,0,0,.05);
     border: 1px solid rgba(0,0,0,.1);
     color: rgba(0,0,0,.5);
-}
+} */
