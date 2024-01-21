@@ -111,12 +111,25 @@ footer {
     margin: 1em auto;
 }
 
+/* CUSTOM STYILING FOR SPECIFIC & SUB SECTION */
+.page-home .hero {
+    background-image: url(../img/pink.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 20vh 1em 20vh 1em;
+}
+.page-home header {
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+}
+
 .page-sub .hero{
     background-color: rgba(0, 0, 0, 0.1);
     color: rgba(0, 0, 0, 0.8);
 }
 
- /* COURSE SECTION */
+/* COURSE SECTION */
  .courses {
     padding: 6em 1em;
     display: grid;
@@ -135,7 +148,7 @@ footer {
     text-align: center;
  }
 
- /* COURSE PAGES WITH MULTIPLE PROJECT LISTS */
+/* COURSE PAGES WITH MULTIPLE PROJECT LISTS */
  .coursework{
     padding: 3em 1em;
     display: flex;
