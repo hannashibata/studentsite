@@ -62,7 +62,7 @@ header a:hover {
 
 /* MAIN */
 main {
-    background-color: white;  
+    background-color: rgb(250, 250, 250);  
 }
 
 section {
@@ -92,7 +92,7 @@ footer {
 
 /* HERO SECTION */
 .hero {
-    background-color: white; 
+    background-color: rgb(250, 250, 250);  
     text-align: center;
     color: rgba (0, 0, 0, 0, 0.8);
     padding: 6em 1em;
