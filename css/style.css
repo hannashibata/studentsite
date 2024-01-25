@@ -179,7 +179,7 @@ footer {
     }
 
     .two-col-sidebar aside{
-        border-right: 1px solid rgba(0, 0, 0, 0.1);
+        border-right: 1px solid rgb(0 0 0 /0.1);
         margin: 0 3em 2em 0;
         padding: .3em 2em 0 0;
     }
@@ -194,7 +194,7 @@ pre code {
     padding: 1em 3em;
     margin-bottom: 1em;
     line-height: 1.5;
-    overflow-wrap: break-word;
+    white-space: pre-wrap;
 }
 
 .markup-box {
