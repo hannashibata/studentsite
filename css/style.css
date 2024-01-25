@@ -161,6 +161,7 @@ footer {
  .container {
     max-width: 1000px;
     margin: 0 auto;
+    border: 10px solid red;
  }
 
  section {
