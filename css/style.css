@@ -3,9 +3,9 @@
 body { margin: 0; }
 
 /* GLOBAL COLORS */
-body { background-color: rgb(220, 220, 220); }
-a { color: rgb(0, 0, 0, 0.8); }
-a:hover {color: rgba(255, 255, 255, 0.4);}
+body { background-color: rgb(220 220 220 /1); }
+a { color: rgb(0 0 0 /0.8); }
+a:hover {color: rgb(255 255 255 /0.4);}
 
 /* GLOBAL STRUCTURE */
 body {
@@ -16,11 +16,18 @@ body {
 
 /* GLOBAL TYPOGRAPHY */
 body {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 88.75%;  /* 14pt */
-    line-height: 1.4; 
-    color: black;
-    text-decoration: none;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 88.75%;  /* 14pt */
+	line-height: 1.4; 
+	color: rgb(0 0 0 /0.8);
+}
+
+/* LINK */
+a {
+	text-decoration: none;
+}
+a:hover {
+    color: rgb(255 255 255 /0.4);
 }
 
 /* SITE HEADER */
@@ -30,15 +37,6 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-}
-
-header a {
-    color: rgb(0, 0, 0, 0.8);
-    text-decoration: none;
-}
-
-header a:hover {
-    color: rgba(255, 255, 255, 0.4);
 }
 
 /* SITE ID */
@@ -62,7 +60,7 @@ header a:hover {
 
 /* MAIN */
 main {
-    background-color: rgb(250, 250, 250);  
+    background-color: rgb(250 250 250 /1);  
 }
 
 section {
@@ -71,7 +69,7 @@ section {
 
 /* FOOTER */
 footer {
-    background-color: rgba(0, 255, 0, 1);
+    background-color: rgb(0 255 0 /1);
     margin: 0;
     padding: 1em;
 }
@@ -92,15 +90,14 @@ footer {
 
 /* HERO SECTION */
 .hero {
-    background-color: rgb(250, 250, 250);  
     text-align: center;
-    color: rgba (0, 0, 0, 0, 0.8);
+    color: rgb(0 0 0 0 /0.8);
     padding: 6em 1em;
 }
 
 .hero h2 {
     font-size: 6em;
-    color: rgba(0, 0, 0, 0, 0.8);
+    color: rgb(0 0 0 0 /0.8);
     line-height: 1;
     text-transform: uppercase;
     margin: 0 auto;
@@ -125,8 +122,8 @@ footer {
 }
 
 .page-sub .hero{
-    background-color: rgba(0, 0, 0, 0.1);
-    color: rgba(0, 0, 0, 0.8);
+    background-color: rgb(0 0 0 /0.1);
+    color: rgb(0 0 0 /0.8);
 }
 
 /* COURSE SECTION */
@@ -143,7 +140,7 @@ footer {
  }
 
  .courses h3 {
-    color: rgba(0, 0, 0, 0, 0.8);
+    color: rgb(0 0 0 /0.8);
     line-height: 1;
     text-align: center;
  }
@@ -188,6 +185,37 @@ footer {
     }
 }
 
+/* PRE CODE STYLE & CODE BLOCKS */
+pre code {
+    width: 100%;
+    display: block;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    padding: 1em 3em;
+    margin-bottom: 1em;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+}
+
+.markup-box {
+    border: 1px solid #ddd;
+    border-radius: 5 px;
+    background-color: #fff;
+    padding: 1em 3em;
+    margin-bottom: 1em;
+}
+
+/* DEFINITION LISTS */
+dt {
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+dd {
+    margin: 0;
+}
+
+
 
 /* FOR WEB DEV PURPOSES ONLY */
 /* this is to see blocks */
@@ -195,4 +223,11 @@ footer {
     background-color: rgba(0,0,0,.05);
     border: 1px solid rgba(0,0,0,.1);
     color: rgba(0,0,0,.5);
+} */
+
+/* RGBA looks different: why? */
+/* body * {
+    background-color: rgb(0 0 0 /0.5);
+    border: 1px solid rgb(0 0 0 /0.1);
+    color: rgb(0 0 0 /0.5);
 } */
