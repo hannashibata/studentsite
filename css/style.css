@@ -22,12 +22,26 @@ body {
 	color: rgb(0 0 0 /0.8);
 }
 
+/* HEADGINGS */
+h1, h2, h3 {
+    font-family: Helvetica, sans-serif;
+    margin: .5em 0;
+}
+
+/* PARAGRAPHS */
+p { max-width: 30em; }
+
 /* LINK */
 a {
 	text-decoration: none;
 }
 a:hover {
     color: rgb(255 255 255 /0.4);
+}
+
+/* GENERAL LISTS */
+ul, ol {
+    padding-left: 1.5em;
 }
 
 /* SITE HEADER */
@@ -48,9 +62,9 @@ header {
 .site-nav ul {
     display: flex;
     justify-content: flex-end;
-    list-style: none; 
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 .site-nav a {
@@ -104,7 +118,6 @@ footer {
 }
 
 .hero p {
-    max-width: 30em;
     margin: 1em auto;
 }
 
