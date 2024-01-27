@@ -39,33 +39,28 @@
     112.5%  => 18px
     125%    => 20px
     */
+
 body {
-        font-family: Helvetica, Arial, sans-serif;
-        color: #333;
-        font-size: 87.5%;   /* 14px */
-        line-height: 1.5%;  /* 14px x 1.5em = 21px */
+    font-size: 87.5%;   /* 14px */
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 1.5;  /* 14px x 1.5 = 21px */
+    color: rgb(0 0 0 /0.8);
 } 
 
 /* HEADINGS
     Based on a Traditional Typographic Scale
     48, 36, 24, 21, 18, 16
  */
- h1,
- h2,
- h3,
- h4,
- h5,
- h6 {
-    font-family: Helvetica, Arial, sans-serif;
+
+ h1, h2, h3, h4, h5, h6 {
     margin: 0.5em 0;
  }
 
  h1 {
-    font-size: 3em;    /* 48px / 16px = 3em */
+    font-size: 3em; /* 48px */
     line-height: 1;
-}
-
-h2 {
+ }
+ h2 {
     font-size: 2.25em;    /* 36px / 16px = 2.25em */
     line-height: 1.1;
 }
@@ -90,131 +85,3 @@ h6 {
     line-height: 1.5;
 }
 
-/* PARAGRAPHS */
-p {
-    margin: 0 0 0.5em 0;
-    max-width: 38em;
-}
-
-.centered p {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-strong {
-    font-weight: 700;
-}
-
-em{
-    font-style: italic;
-}
-
-/* #LINKS */
-a {
-    color: #036;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    color: #003;
-  }
-
-/* BLOCK QUOTES */
-blockquote {
-    font-size: 1.42em;
-    margin: 1.5em 0;
-    padding: 1.5em;
-    border-top: 0px solid #ccc;
-    border-bottom: 0px solid #ccc;
-}
-
-blockquote cite {
-    display: block;
-    opacity: 0.8;
-    font-size: 0.875em;
-}
-
-blockquote cite:before {
-    content: "-";
-    margin-right: 0.25em;
-}
-
-/* HELPERS */
-.text-centered {
-    text-align: center;
-}
-
-.full-widt {
-    max-width: none;
-    width: 100%;
-}
-
-.horz-center {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.hidden {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-}
-
-.subheader {
-    color: #999;
-    margin-top: 1em;
-    font-style: normal;
-    font-weight: normal;
-    clear: both;
-}
-
-/* HORIZONTAL RULES */
-hr {
-    border: 0;
-    height: 1px;
-    background: #ddd;
-    margin: 2em 0;
-}
-
-/* MEDIA */
-/* IMAGES */
-img{
-    max-width: 100%;
-    height: auto;
-}
-
-/* COMPONENTS */
-/* BUTTONS */
-button {
-    font-size: inherit;
-}
-
-button,
-a.button {
-    display: inline-block;
-    background-color: #036;
-    border: 1px solid #036;
-    color: #fff;
-    padding: 0.75em 1em;
-    border-radius: 0.32em;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    border: none;
-    cursor: pointer;
-    line-height: 1;
-}
-
-button.alt,
-a.button.alt {
-    background-color: transparent;
-    border: 1px solid #036;
-    color: #036;
-}
-
-button:hover,
-a.button:hover {
-    background-color: #003;
-    color: #fff;
-    border-color: #003;
-    text-decoration: none;
-}
