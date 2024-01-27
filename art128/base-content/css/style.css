@@ -85,3 +85,73 @@ h6 {
     line-height: 1.5;
 }
 
+/* PARAGRAPHS */
+p {
+    margin: .5em 0;
+    max-width: 38em;
+}
+
+/* LINKS */
+a {
+    color: rgba(255 0 200 / 0.9);
+    text-decoration: none;
+}
+a:hover {
+    color: rgb(255 0 200 / 0.1);
+    text-decoration: underline;
+}
+
+/* HELPER CLASSES */
+.text-center {
+    text-align: center;
+}
+
+.full-width {
+    max-width: none;
+    width: 100%;
+}
+
+.horiz-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* IMAGES */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* BUTTONS */
+.button,
+button {
+    font-size: inherit;
+    line-height: 1;
+    border: 1px solid rgb(255 0 200 /1);
+    background-color: rgb(255 0 200 / 1);
+    color: rgb(255 255 255 /1);
+    padding: 1em;
+    margin: 0.5em;
+    display: inline-block;
+    text-align: center;
+    border-radius: 0.5em;
+}
+
+.button:hover,
+button:hover {
+    border: 1px solid rgb(205 5 162 /1);
+    background-color: rgb(205 5 162 /1);
+    color: rgb(255 255 255 /0.8);
+}
+
+.button.alt {
+    border: 1px solid rgb(255 0 200 /1);
+    background: transparent;
+    color: rgb(255 0 200 /1);
+}
+
+.button.alt:hover {
+    border: 1px solid rgb(205 5 162 /1);
+    background: rgb(205 5 162 /1);
+    color: rgb(255 255 255 /0.8);
+}
