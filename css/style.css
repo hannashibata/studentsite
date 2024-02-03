@@ -117,11 +117,20 @@ footer {
 .hero h2 {
     font-size: 6em;
     color: rgb(250 250 250 /1);  
-    text-shadow: -0.03em .03em rgba(252, 15, 192, 0.4);
+    text-shadow: -0.03em .03em rgb(0 0 0 /.2);
     transform: rotate(-2deg);
+    animation-name: animation-h2;
+    animation-duration: 1s;
+    animation-iteration-count: 2;
     line-height: 1;
     text-transform: uppercase;
     margin: 0 auto;
+}
+
+@keyframes animation-h2 {
+    0%      { color: var(--my-white); }
+    75%     { color: var(--my-magenta); }
+    100%    { color: var(--my-green); }
 }
 
 .hero p {
