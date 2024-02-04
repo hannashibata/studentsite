@@ -116,7 +116,7 @@ footer {
 
 .hero h2 {
     font-size: 6em;
-    color: rgb(250 250 250 /1);  
+    color: var(--my-white);  
     text-shadow: -0.03em .03em rgb(0 0 0 /.2);
     transform: rotate(-2deg);
     animation-name: animation-h2;
