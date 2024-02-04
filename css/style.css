@@ -41,7 +41,7 @@ a {
 	text-decoration: none;
 }
 a:hover {
-    color: rgb(255 255 255 /0.4);
+    transform: rotate(10deg);
 }
 
 /* GENERAL LISTS */
