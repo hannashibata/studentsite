@@ -118,7 +118,6 @@ footer {
     font-size: 6em;
     color: var(--my-white);  
     text-shadow: -0.03em .03em rgb(0 0 0 /.2);
-    transform: rotate(-2deg);
     animation-name: animation-h2;
     animation-duration: 1s;
     animation-iteration-count: 2;
