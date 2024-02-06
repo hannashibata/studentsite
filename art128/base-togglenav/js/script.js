@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     menubutton.addEventListener('click', function () {
         if (menunav.getAttribute('data-navstate') === 'open') {
             // If true do this
-            menunav.setAttribute('data-navstate', closed);
+            menunav.setAttribute('data-navstate', 'closed');
         } else {
             // else (if false) do this
             menunav.setAttribute('data-navstate', 'open');
