@@ -390,6 +390,7 @@ section {
     .toggle-nav .site-nav .menu-button.navicon {
         border: none;
         color: rgb(255 255 255 /0);
+        padding: 0;
     }
     .toggle-nav .site-nav .menu-button.navicon::after {
         content: "\2630";
