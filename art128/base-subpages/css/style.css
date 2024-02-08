@@ -358,6 +358,7 @@ section {
         text-align: right;
     }
     .toggle-nav .site-nav .menu-button {
+        display: block;
         display: inline-block;
         cursor: pointer;
         padding: .3em 0;
@@ -371,18 +372,17 @@ section {
     .toggle-nav .site-nav ul {
         display: block;
         text-align: center;
-        transition: all .4s ease-out;  /* .4s is the slowest */
     }
     .toggle-nav .site-nav a:hover {
         background: rgb(255 0 200 /.8);
         color: white;
     }
     .toggle-nav[data-navstate="closed"] ul {
-        max-height: 0;
+        height: 0;
         overflow: hidden;
     }
     .toggle-nav[data-navstate="open"] ul {
-        max-height: 100vh;
+        height: auto;
         overflow: visible;
     }
 
@@ -397,13 +397,21 @@ section {
         display: inline-block;
         padding: 0 .4em;
         margin: 0;
-        color: rgb(0 0 0 /.8);
+        color: rgb(255 0 200 /1);
         font-size: 1.5em;
     }
 
-    .toggle-nav[data-navstate="open"] .site-nav .menu-button.navicon::after {
+    .toggle-nav[data-navstate="open"] .site-nav .menu-nutton.navivon::after {
         content: "\2715";
     }
+}
+
+/* HELPERS */
+.hidden {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    
 }
 
 
