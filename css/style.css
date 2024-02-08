@@ -10,13 +10,13 @@ html {
 }
 body { background-color: var(--my-white); }
 a { color: rgb(0 0 0 /0.8); }
-a:hover {color: rgb(255 255 255 /0.8);}
+a:hover {color: rgb(0 0 0 /.2);}
 
 /* GLOBAL STRUCTURE */
 body {
     display: grid;
-    grid-template-rows: auto 1fr auto;
     min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
 }
 
 /* GLOBAL TYPOGRAPHY */
@@ -41,7 +41,7 @@ a {
 	text-decoration: none;
 }
 a:hover {
-    transform: rotate(10deg);
+    transform: rotate(-5deg);
 }
 
 /* GENERAL LISTS */
@@ -83,7 +83,7 @@ main {
 }
 
 section {
-    padding: 3em, 1em;
+    padding: 3em 1em;
 }
 
 /* FOOTER */
@@ -110,7 +110,7 @@ footer {
 /* HERO SECTION */
 .hero {
     text-align: center;
-    color: rgb(0 0 0 0 /0.8);
+    color: rgb(0 0 0 /0.8);
     padding: 6em 1em;
 }
 
@@ -228,13 +228,13 @@ pre code {
 
 .markup-box {
     border: 1px solid #ddd;
-    border-radius: 5 px;
+    border-radius: 5px;
     background-color: #fff;
     padding: 1em 3em;
     margin-bottom: 1em;
 }
 /* NOTES PAGE SCCROLLBAR FIX FOR GISTS */
-@mdeia (min-width: 768px) and (max-width: 910px) {
+@media (min-width: 768px) and (max-width: 910px) {
     .gist {
     max-width: 450px;
     }
