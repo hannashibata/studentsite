@@ -146,24 +146,40 @@ footer {
 .hero h2 {
     font-size: 6em;
     color: var(--my-white);  
-    text-shadow: 0em 0em 0.2em rgb(0 0 0 /.2);
+    text-shadow: 0em 0em 0.2em rgb(0 0 0 /.8);
     animation-name: animation-h2;
-    animation-duration: 0.8s;
-    animation-iteration-count: 2;
+    animation-duration: 2s;
+    /* animation-iteration-count: 2; */
     line-height: 1;
     text-transform: uppercase;
     margin: 0 auto;
 }
 
 @keyframes animation-h2 {
-    0%      { color: var(--my-white); }
+    10%   { opacity: 0;}
+    100% { opacity: 1;}
+    0%   { transform: translateY(-0.5em); }
+
+    /* 0%      { color: var(--my-white); }
     75%     { color: var(--my-magenta); }
-    100%    { color: var(--my-green); }
+    100%    { color: var(--my-green); } */
 }
 
 .hero p {
     color: var(--my-white);
     margin: 1em auto;
+    animation-name: animation-p;
+    animation-duration: 2s;
+}
+
+@keyframes animation-p {
+    10%   { opacity: 0;}
+    100% { opacity: 1;}
+    0%   { transform: translateY(0.5em); }
+
+    /* 0%      { color: var(--my-white); }
+    75%     { color: var(--my-magenta); }
+    100%    { color: var(--my-green); } */
 }
 
 /* CUSTOM STYILING FOR SPECIFIC & SUB SECTION */
@@ -171,7 +187,7 @@ footer {
     background-image: url(../img/black-01.jpg);
     background-size: cover;
     background-position: center;
-    padding: 20vh 1em 20vh 1em;
+    padding: 20vh 1em;
 }
 .page-home header {
     background-color: transparent;
@@ -180,7 +196,7 @@ footer {
 }
 
 .page-home section {
-    background-color: var(--my-black);
+    background-color: rgb(0 0 0 /1);
 }
 
 .page-sub .hero{
@@ -190,7 +206,7 @@ footer {
 
 /* COURSE SECTION */
  .courses {
-    padding: 6em 1em;
+    padding: 4em 1em 7em 1em;
     display: grid;
     justify-content: center;
  }
