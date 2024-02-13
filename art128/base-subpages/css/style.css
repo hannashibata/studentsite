@@ -130,7 +130,8 @@ img {
 
 /* BUTTONS */
 .button,
-button {
+button,
+form input[type=submit] {
     font-size: inherit;
     line-height: 1;
     border: 1px solid rgb(255 0 200 /1);
@@ -144,7 +145,8 @@ button {
 }
 
 .button:hover,
-button:hover {
+button:hover,
+form input[type=submit]:hover {
     border: 1px solid rgb(205 5 162 /1);
     background-color: rgb(205 5 162 /1);
     color: rgb(255 255 255 /0.8);
@@ -486,7 +488,7 @@ form label {
     margin-bottom: .2em;
 }
 
-form input,
+form input[type=text],
 form textarea {
     border: 1px solid #ccc;
     padding: .25em;

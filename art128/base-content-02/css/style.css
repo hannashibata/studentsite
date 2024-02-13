@@ -1,0 +1,94 @@
+/* ------------------------------
+CSS TABLE OF CONTENTS
+    # BASE CONTENT
+        #BASE TYPOGRAPHY
+            #BODY
+            #HEADINGS
+            #PARAGRAPHS
+    # MEDIA
+        # IMAGES
+------------------------------ */
+
+/* TYPOGRAPHIC SCALE */
+
+body {
+    /* SET BODY TO  14px */
+    font-size: 87.5%;
+    line-height: 1.4;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(0 0 0 /.8);
+    background: rgb(255 255 255/.2);
+}
+
+/* SMALL SCREENS: SET BODY TO  16px */
+/* @media (min-width: 768px) {
+    body {
+        font-size: 100%;
+    }
+} */
+/* MID-LARGE SCREENS: SET BODY TO  18px */
+/* @media (min-width: 1200px) {
+    body {
+ 
+        font-size: 112.5%;
+    }
+} */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: helvetica, arial, sans-serif;
+}
+
+
+h1 {
+    font-size: 2.25em;
+    line-height: 1;
+}
+
+h2 {
+    font-size: 1.875em;
+    line-height: 1.1;
+}
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.2;
+}
+
+h4 {
+    font-size: 1.315em;
+    line-height: 1.3;
+}
+
+h5 {
+    font-size: 1.125em;
+    line-height: 1.4;
+}
+
+h6 {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: .5em 0;
+}
+
+p + h1,
+p + h2,
+p + h3,
+p + h4,
+p + h5,
+p + h6 {
+    margin-top: 2em;
+}
