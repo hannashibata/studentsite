@@ -156,6 +156,7 @@ footer {
 }
 
 @keyframes animation-h2 {
+    0%    { opacity: 0;}
     10%   { opacity: 0;}
     100% { opacity: 1;}
     0%   { transform: translateY(-0.5em); }
@@ -173,6 +174,7 @@ footer {
 }
 
 @keyframes animation-p {
+    0%    { opacity: 0;}
     10%   { opacity: 0;}
     100% { opacity: 1;}
     0%   { transform: translateY(0.5em); }
