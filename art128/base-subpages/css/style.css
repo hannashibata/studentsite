@@ -349,7 +349,8 @@ section {
     text-align: center;
 }
 
-.hero h1, p {
+.hero h1,
+.hero p {
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
@@ -467,11 +468,9 @@ article p:first-of-type:first-letter {
 }
 
 
-
-
 /* FOR DEV PURPOSES ONLY */
-/* body * {
+body * {
     background-color: rgba(0,0,0,.05);
     border: 1px solid rgba(0,0,0,.1);
     color: rgba(0,0,0,.5);
-} */
+}
