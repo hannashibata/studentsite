@@ -522,6 +522,7 @@ form input[type=submit] {
 .site-header.sticky {
     position: fixed;
     width: 100%;
+    background-color: white;
 }
 
 .site-header.sticky + main {

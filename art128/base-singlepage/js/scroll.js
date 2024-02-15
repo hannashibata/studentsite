@@ -27,11 +27,12 @@ document.addEventListener("DOMContentLoaded", () => {
       const siteheader = document.querySelector(".site-header");
       const siteheaderfixed = haveClass(siteheader, "sticky");
       var offset;
-      if (siteheadersticky) {
-        offset = document.querySelector(".site-id").offsetHeight + 15;
+      if (siteheaderfixed) {
+        offset = document.querySelector(".site-id").offsetHeight + 20;
       } else {
         offset = 0;
       }
+
   
       const delta = (() => {
         if (hash.length < 2) return -start;

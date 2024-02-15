@@ -16,15 +16,9 @@ document.addEventListener('DOMContentLoaded', function() {
     //TOGGLE NAV MOBILE MENU SCROLL LINKS FOR SMALL SCREENS
     var stickynavlinks = document.querySelectorAll(".sticky nav a");
     var j;
-    for (j = 0; j < menubutton.clientHeight; j++) {
+    for (j = 0; j < stickynavlinks.length; j++) {
         stickynavlinks[j].onclick = function() {
-            this.classList.toggle("open");
-
-            var stickymenu = document.querySelectorAll(".sticky menu-button");
-            var k;
-            for (k = 0; k < stickymenu.clientHeight; k++) {
-                stickymenu[k].classList.remove("open");
-            };
+            menunav.setAttribute('data-navstate', 'closed');
         };
     };
 });
