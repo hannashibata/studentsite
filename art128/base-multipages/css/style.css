@@ -130,7 +130,6 @@ img {
 
 /* BUTTONS */
 .button,
-button,
 form input[type=submit] {
     font-size: inherit;
     line-height: 1;
@@ -145,11 +144,11 @@ form input[type=submit] {
 }
 
 .button:hover,
-button:hover,
 form input[type=submit]:hover {
     border: 1px solid rgb(205 5 162 /1);
     background-color: rgb(205 5 162 /1);
     color: rgb(255 255 255 /0.8);
+    text-decoration: none;
 }
 
 .button.alt {
