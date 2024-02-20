@@ -100,6 +100,26 @@ a:hover {
     text-decoration: underline;
 }
 
+/* BLOCK QUOTES */
+blockquote {
+    font-size: 1.142em;
+    margin: 1.5em 0;
+    padding: 1.5em;
+    border-top: 0px solid #ccc;
+    border-bottom: 0px solid #ccc;
+}
+
+blockquote cite {
+    display: block;
+    opacity: 0.8;
+    font-size: 0.875em;
+}
+
+blockquote cite:before {
+    content: "—";
+    margin-right: 0.25em;
+}
+
 /* HELPER CLASSES */
 .text-center {
     text-align: center;
