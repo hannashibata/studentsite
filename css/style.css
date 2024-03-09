@@ -40,6 +40,11 @@ h3 {
     margin: .5em 0;
 }
 
+h4, dt {
+    font-family: 'pp_editorial_ultrabold', Georgia, sans-serif;
+    margin: .5em 0;
+}
+
 /* PARAGRAPHS */
 p { max-width: 66ch; }
 
@@ -297,7 +302,7 @@ pre code {
 
 /* DEFINITION LISTS */
 dt {
-    font-weight: bold;
+    /* font-weight: bold; */
     margin-top: 1em;
 }
 
