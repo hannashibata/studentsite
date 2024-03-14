@@ -26,6 +26,7 @@
             #SUB PAGES
         #SITE NAVIGATION
             #TOGGLE-NAV (Default for Small Screens)
+    #CUSTOM SITE CSS
 ---------------------------------*/
 /* TYPOGRAPHY */
 /* Reference
@@ -102,30 +103,11 @@ a {
     text-decoration: none;
 }
 a:hover {
-    color: rgb(255 0 200 / .1);
+    color: rgb(255 255 255 / .2);
     text-decoration: underline;
 }
 
 /* HELPER CLASSES */
-.text-center {
-    text-align: center;
-}
-
-.full-width {
-    max-width: none;
-    width: 100%;
-}
-
-.horiz-center {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* .hidden {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-} */
 
 /* IMAGES */
 img {
@@ -173,10 +155,11 @@ form input[type=submit]:hover {
     /* background-color: green; */
     font-size: 75%;    /* 12px */
     line-height: 1.5;
+    padding: 0.3em;
 }
 
 .button-price {
-    background-color: green;
+    background-color: green; /* QUESTION: this is not working */
     font-size: 100%;    /* 12px */
     line-height: 1.5;
 }
@@ -372,6 +355,7 @@ section {
     padding: 6em 4%;
     background-color: rgb(0 0 0 /.1);
     text-align: right;
+    /* margin-bottom: -100px; */
 }
 
 .hero h1,
@@ -438,10 +422,6 @@ section {
     }
 }
 
-/* SUB PAGES */
-
-/* FORMS */
-
 /* CUSTOM SITE CSS */
 .section-title {
     text-align: left;
@@ -467,15 +447,25 @@ section {
     padding: 1.5em;
 }
 
-/* VERTICAL MEDIA QUERY add height/paddint to ottom of contact section only for lg screens */
-@media (min-height: 600px) {
-    #contact {
-        padding-bottom: 20em;
-    }
+.yellow-blurb {
+    background-color: #fdcd2e;
+    padding: 1em;
 }
+
+.grid-breaker.feature {
+    max-width: 240px; 
+/* QUESTION: I don't know how to define the size */
+}
+
+.blurb {
+    padding: 1em;
+/* QUESTION: I don't know how to define the size */
+}
+
+
 /* FOR DEV PURPOSES ONLY */
-/* body * {
+body * {
     background-color: rgba(0,0,0,.05);
     border: 1px solid rgba(0,0,0,.1);
     color: rgba(0,0,0,.5);
-} */
+}
