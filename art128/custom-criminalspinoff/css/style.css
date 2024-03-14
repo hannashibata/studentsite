@@ -1,0 +1,481 @@
+@charset "UTF-8";
+/* BASE CSS (Initial Setup)
+---------------------------------
+    #BASE CONTENT
+        #TYPOGRAPHY
+            #BODY
+            #HEADINGS
+            #PARAGRAPHS
+            #LINKS
+            #HELPER
+        #MEDIA
+            #IMAGES
+        #COMPONENTS
+            #BUTTONS
+    #BASE LAYOUT
+        #SIMPLE RESET
+        #MEDIQUERIES
+        #CONTAINER
+        #GRID SYSTEM
+    #BASE SITE
+        #SITE STRUCTURE
+            #HEADER
+                #site-id (IDENTIFIER, LOGO)
+            #FOOTER
+            #SECTIONS
+            #SUB PAGES
+        #SITE NAVIGATION
+            #TOGGLE-NAV (Default for Small Screens)
+---------------------------------*/
+/* TYPOGRAPHY */
+/* Reference
+    62.5%   => 10px
+    68.2%   => 11px
+    75%     => 12px
+    81.3%   => 13px
+    87.5%   => 14px
+    100%    => 16px
+    112.5%  => 18px
+    125%    => 20px
+    */
+
+body {
+    font-size: 87.5%;   /* 14px */
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 1.5;  /* 14px x 1.5 = 21px */
+    color: black;
+} 
+
+/* HEADINGS
+    Based on a Traditional Typographic Scale
+    48, 36, 24, 21, 18, 16
+ */
+
+ h1, h2, h3, h4, h5, h6 {
+    margin: 0.5em 0;
+ }
+
+ h1 {
+    font-size: 3em; /* 48px */
+    line-height: 1;
+ }
+ h2 {
+    font-size: 2.25em;    /* 36px / 16px = 2.25em */
+    line-height: 1.1;
+}
+
+h3 {
+    font-size: 1.5em;    /* 24px / 16px = 1.5em */
+    line-height: 1.2;
+}
+
+h4 {
+    font-size: 1.3125em;    /* 21px / 16px = 1.3125em */
+    line-height: 1.3;
+}
+
+h5 {
+    font-size: 1.125em;    /* 18px / 16px = 1.125em */
+    line-height: 1.4;
+}
+
+h6 {
+    font-size: 1em;    /* 16px / 16px = 1em */
+    line-height: 1.5;
+}
+
+/* PARAGRAPHS */
+p {
+    margin: .5em 0;
+    max-width: 38em;
+}
+
+blockquote footer {
+    font-weight: 800; 
+    text-align: right;
+}
+
+/* LINKS */
+a {
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+}
+a:hover {
+    color: rgb(255 0 200 / .1);
+    text-decoration: underline;
+}
+
+/* HELPER CLASSES */
+.text-center {
+    text-align: center;
+}
+
+.full-width {
+    max-width: none;
+    width: 100%;
+}
+
+.horiz-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* .hidden {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+} */
+
+/* IMAGES */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* BUTTONS */
+.button,
+form input[type=submit] {
+    font-size: inherit;
+    line-height: 1;
+    border: 2px solid #ff342c;
+    background-color: #ff342c;
+    color: black;
+    padding: 1em;
+    margin: .5em .5em .5em 0;
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 0.1em;
+}
+
+.button:hover,
+form input[type=submit]:hover {
+    border: 2px solid #ff342c;
+    background-color: rgb(0 0 0 /0);
+    color: #ff342c;
+    text-decoration: none;
+}
+
+.button.alt {
+    border: 2px solid #FED6CE;
+    background-color: #FED6CE;
+    color: black;
+}
+
+.button.alt:hover {
+    border: 2px solid #FED6CE;
+    background-color: rgb(0 0 0 /0);
+    color: #FED6CE;
+}
+
+.button-text {
+    /* background-color: green; */
+    font-size: 75%;    /* 12px */
+    line-height: 1.5;
+}
+
+.button-price {
+    background-color: green;
+    font-size: 100%;    /* 12px */
+    line-height: 1.5;
+}
+
+/* LAYOUT */
+
+/* SIMPLE RESET */
+* { box-sizing: border-box; }
+body { margin: 0;}
+
+/* CONTAINER */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+
+/* MEDIA QUERIES */
+/* phone -> tablet -> laptop -> desktop */
+@media ( min-width: 768px) {
+    /* TABLET SIZED STYLING GOES HERE */
+
+    body {
+        font-size: 100%;
+    }
+}
+
+@media ( min-width: 1050px) {
+    body {
+        font-size: 100%;    /* 16px */
+    }
+}
+
+@media ( min-width: 1250px) {
+    body {
+        font-size: 112.5%;  /* 18px */
+    }
+    .container {
+        max-width: 1200px;
+        
+    }
+}
+
+/* FOR DEMO PURPOSES ONLY*/
+body.demo {
+    padding-top: 2em;
+}
+
+body.demo::before {
+    content: "Small (Mobile) Screen Less than 768px";
+    background-color: #933;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    text-align: center;
+    color: white;
+    padding: .5em;
+}
+
+@media ( min-width: 768px) {
+    body.demo::before {
+        background-color: #bcb83d;
+        content: "Midsize (Tablet) Screen 768px – 1050px";
+    }
+}
+
+@media ( min-width: 1050px) {
+    body.demo::before {
+        background-color: #669933;
+        content: "Large (Notebook) Screen 1050px – 1250px";
+    }
+}
+
+@media ( min-width: 1250px) {
+    body.demo::before {
+        background-color: #0099cc;
+        content: "Extra Large (Desktop) Screen 1250px +"
+    }
+}
+
+/* SEMANTIC GRID SYSTEM */
+.row > .column {
+    margin-bottom: 4%;
+}
+
+@media ( min-width: 768px) {
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        margin-left: -2%;
+        margin-right: -2%
+    }
+    
+    .row.swapped {
+        flex-direction: row-reverse;
+    }
+    .row > .column {
+        flex-grow: 1;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .row > .column.one-half {
+        max-width: 46%;
+    }
+
+    .row > .column.one-third {
+        max-width: 29.3333%;
+    }
+
+    .row > .column.two-thirds {
+        max-width: 62.6666%;
+    }
+
+    .row > .column.one-fourth {
+        max-width: 21%;
+    }
+
+    .row > .column.centered {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* FOR DEMO PURPOSES ONLY */
+.demo .column {
+    background: rgb(0 0 0 / .2);
+    padding: 1em;
+    text-align: center;
+}
+
+/* SITE HEADER */
+.site-header {
+    padding: 1em 0;
+    position: absolute;
+}
+
+/* PLACE SITE-ID LEFT AND NAV RIGHT ON LARGER SCREENS */
+@media (min-width: 768px) {
+    .site-header .container {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+/* STYYLING FOR BOTH HEADER AND FOOTER */
+.site-header a,
+.site-footer a {
+    color:  black;
+}
+
+.site-header a:hover,
+.site-footer a:hover {
+    color: rgb(0 0 0 /.2);
+    text-decoration: none;
+}
+
+/* ID AREA */
+.site-id h1 {
+    font-size: 1.5em;
+    margin: 0;
+    padding-top: .55em;
+    text-align: center;
+}
+
+/* SITE NAV */
+.site-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.site-nav a {
+    display: block;
+    padding: 1em;
+}
+
+.site-nav .menu-button {
+    display: none;
+}
+
+/* SECTION */
+section {
+    padding: 3em 0;}
+
+/* HERO */
+.hero {
+    padding: 6em 4%;
+    background-color: rgb(0 0 0 /.1);
+    text-align: right;
+}
+
+.hero h1,
+.hero p {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* TOGGLE NAV */
+@media ( max-width: 767px) {
+    .toggle-nav .site-id {
+        position: absolute;
+    }
+    .toggle-nav .site-nav {
+        text-align: right;
+    }
+    .toggle-nav .site-nav .menu-button {
+        display: inline-block;
+        cursor: pointer;
+        padding: .3em 0;
+        margin: .8em 0;
+        border: none;
+        background: none;
+    }
+    .toggle-nav .site-nav .menu-button::selection {
+        background: rgb(255 255 255 /0);
+    }
+    .toggle-nav .site-nav ul {
+        display: block;
+        text-align: center;
+        transition: all .4s ease-out;  /* .4s is the slowest */
+    }
+    .toggle-nav .site-nav a:hover {
+        background: rgb(255 0 200 /.8);
+        color: white;
+    }
+    .toggle-nav[data-navstate="closed"] ul {
+        max-height: 0;
+        overflow: hidden;
+    }
+    .toggle-nav[data-navstate="open"] ul {
+        max-height: 100vh;
+        overflow: visible;
+    }
+
+    /* NAVICON */
+    .toggle-nav .site-nav .menu-button.navicon {
+        border: none;
+        color: rgb(255 255 255 /0);
+        padding: 0;
+    }
+    .toggle-nav .site-nav .menu-button.navicon::after {
+        content: "\2630";
+        display: inline-block;
+        padding: 0 .4em;
+        margin: 0;
+        color: rgb(0 0 0 /.8);
+        font-size: 1.5em;
+    }
+
+    .toggle-nav[data-navstate="open"] .site-nav .menu-button.navicon::after {
+        content: "\2715";
+    }
+}
+
+/* SUB PAGES */
+
+/* FORMS */
+
+/* CUSTOM SITE CSS */
+.section-title {
+    text-align: left;
+    margin-bottom: 1em;
+}
+
+.site-header.fixed {
+    position: fixed;
+    width: 100%;
+    background-color: white;
+}
+
+.site-header.fixed + main {
+    padding-top: 3em;
+}
+
+#about {
+    background: rgb(0 0 0 /.05);
+}
+
+.yellow-box {
+    background-color: #fdcd2e;
+    padding: 1.5em;
+}
+
+/* VERTICAL MEDIA QUERY add height/paddint to ottom of contact section only for lg screens */
+@media (min-height: 600px) {
+    #contact {
+        padding-bottom: 20em;
+    }
+}
+/* FOR DEV PURPOSES ONLY */
+/* body * {
+    background-color: rgba(0,0,0,.05);
+    border: 1px solid rgba(0,0,0,.1);
+    color: rgba(0,0,0,.5);
+} */
