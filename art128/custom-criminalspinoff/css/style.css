@@ -357,6 +357,10 @@ body.demo::before {
     text-transform: uppercase;
 }
 
+.site-nav li {
+    margin: 0 10px;
+}
+
 .site-nav a {
     display: block;
     padding: 1em;
@@ -378,7 +382,7 @@ section {
 }
 
 .hero-shot {
-    margin-top: -30px;
+    margin-top: -40px;
     transform: scale(1.3);
     transform-origin: 60% 15%;
 }
