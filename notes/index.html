@@ -14,17 +14,19 @@
 
 <body class="page-sub">
   <header>
-       <div class="site-id">
-          <h1><a href="../index.html">♻️</a></h1>
-       </div>
-      <nav class="site-nav">
-        <ul>
-          <li><a href="../art128/index.html">ART 128</a></li>
-          <li><a href="../art298/index.html">298</a></li>
-          <li><a href="index.html">Notes</a></li>
-          <li><a href="http://hannashibata.com" target="blank">Other</a></li>
-        </ul>
-      </nav>
+    <div class="site-id">
+      <h1><a href="../index.html">♻️</a></h1>
+    </div>
+    
+    <nav class="site-nav">
+      <ul>
+        <li><a href="../art128/index.html">ART 128</a></li>
+        <li><a href="../art298/index.html">298</a></li>
+        <li><a href="index.html">Notes</a></li>
+        <li><a href="http://hannashibata.com" target="blank">Other</a></li>
+      </ul>
+    </nav>
+
   </header>
 
   <main>
@@ -36,6 +38,7 @@
     <section>
         <div class="container two-col-sidebar">
 
+          <!-- aside: Index for the content -->
           <aside>
              <h3>Contents</h3>
              <ol>
@@ -81,13 +84,21 @@
                 </ul>
               </li>
 
+              <li>
+                <a href="#local-typography">Local Typography</a>
+                <ul>
+                  <li><a href="#blockquote">Blockquote</a></li>
+                </ul>
+              </li>
+
             </ol>
 
+            <!-- END aside: index for the content -->
           </aside>
           
-          <div class="primary">
-            
-            <h2 id="intro">Introduction</h2>
+        <div class="primary">
+
+          <h2 id="intro">Introduction</h2>
             <p id="about">
               This page contains my notes taken while studying web design and front-end web development.
             </p>
@@ -111,10 +122,11 @@
               <li><a href="#">Github pages</a> (Free Static Site Hosting)</li>
               <li><a href="#">VS Code</a> (Code Editor)</li>
             </ul>
+          
+          <hr>
+            
 
-            <hr>
-
-            <h2 id="setup">Getting Setup</h2>
+          <h2 id="setup">Getting Setup</h2>
             
             <h3 id="folders">Basic Website Folder Structure</h3>
 
@@ -125,106 +137,102 @@ sitename/
 │  ├──<a href="https://github.com/hannashibata/studentsite/blob/main/css/style.css">style.css</a>
             </code></pre>
 
-            <hr>
+          <hr>
 
             <h3 id="html">Blank HTML Document</h3>
             <p>Example index.html file:</p>
-              <script src="https://gist.github.com/hannashibata/e6a9282caa48c50ec7b370f13f7e6d91.js"></script>
+            <script src="https://gist.github.com/hannashibata/e6a9282caa48c50ec7b370f13f7e6d91.js"></script>
 
-            <hr>
+          <hr>
 
             <h3 id="html">Blank CSS Document</h3>
             <p>Example style.css file with a CSS Table of Contents:</p>
-              <script src="https://gist.github.com/hannashibata/9da96a1f40acfd439ce5b7eb2bf0646d.js"></script>
+            <script src="https://gist.github.com/hannashibata/9da96a1f40acfd439ce5b7eb2bf0646d.js"></script>
 
-            <hr>
+          <hr>
 
-            <h2 id="base-styles">Base Styles</h2>
+          <h2 id="base-styles">Base Styles</h2>
         
             <h3 id="global-reset">CSS Global Reset</h3>
-              <script src="https://gist.github.com/hannashibata/ba6d75ffa8a58e8494a62fed8594ba36.js"></script>
+            <script src="https://gist.github.com/hannashibata/ba6d75ffa8a58e8494a62fed8594ba36.js"></script>
 
-            <hr>
+          <hr>
 
             <h3 id="global-colors">CSS Global Colors</h3>
             <script src="https://gist.github.com/hannashibata/9749f19d66fc0becb8bedcd33230cc66.js"></script>
 
-            <hr>
+          <hr>
 
             <h3 id="global-structures">CSS Global Structures</h3>
             <script src="https://gist.github.com/hannashibata/1937c6d96750848ecfa4030a5c70b9d3.js"></script>
 
-            <hr>
+          <hr>
 
             <h3 id="global-typography">CSS GLobal Typography</h3>
-            <div class="markup-box">
+              <div class="markup-box">
 
-              <h1>This is a Heading 1</h1>
-              <h2>This is a Heading 2</h2>
-              <h3>This is a Heading 3</h3>
+                <h1>This is a Heading 1</h1>
+                <h2>This is a Heading 2</h2>
+                <h3>This is a Heading 3</h3>
 
-              <p>This is a pragraph. Ths is <strong>bold text</strong>. This is <em>italic text</em>. This is an <a href="#">inline text link</a>. This is English. そしてこれは日本語。</p>
+                <p>This is a pragraph. Ths is <strong>bold text</strong>. This is <em>italic text</em>. This is an <a href="#">inline text link</a>. This is English. そしてこれは日本語。</p>
 
-              <ul>
-                <li>This is an Unordered List Item</li>
-                <li>This is an Unordered List Item</li>
-                <li>This is an Unordered List Item</li>
-              </ul>
-
-              <ol>
-                <li>This is an Ordered List Item</li>
-                <li>This is an Ordered List Item</li>
-                <li>This is an Ordered List Item</li>
-              </ol>
-
-              <p>This is a <a href="#">Link</a></p>
+                <ul>
+                  <li>This is an Unordered List Item</li>
+                  <li>This is an Unordered List Item</li>
+                  <li>This is an Unordered List Item</li>
+                </ul>
+  
+                <ol>
+                  <li>This is an Ordered List Item</li>
+                  <li>This is an Ordered List Item</li>
+                  <li>This is an Ordered List Item</li>
+                </ol>
+  
+                <p>This is a <a href="#">Link</a></p>
             </div>
 
-              <script src="https://gist.github.com/hannashibata/bce877a0b96b58e85a862aa6c03fc082.js"></script>
-              <script src="https://gist.github.com/hannashibata/3c1861afaa203b757fda07e0da637e10.js"></script>
+            <script src="https://gist.github.com/hannashibata/bce877a0b96b58e85a862aa6c03fc082.js"></script>
+            <script src="https://gist.github.com/hannashibata/3c1861afaa203b757fda07e0da637e10.js"></script>
 
           <hr>
 
           <h2 id="glossary">Glossary:</h2>
-          <h3 id="glossary">Common Terms &amp; Definitions:</h3>
-          
-          <dl>
-            <dt>HTML</dt>
-            <dd>Hypertext Markup Language</dd>
-            <dt>CSS</dt>
-            <dd>Cascading Style Sheets</dd>
-            <dt>JS</dt>
-            <dd>JavaScript</dd>
-            <dt>CLI</dt>
-            <dd>Command Line Interface</dd>
-            <dt>GUI</dt>
-            <dd>Graphic User Interface</dd>
-          </dl>
+            <h3 id="glossary">Common Terms &amp; Definitions:</h3>
+            <dl>
+              <dt>HTML</dt>
+              <dd>Hypertext Markup Language</dd>
+              <dt>CSS</dt>
+              <dd>Cascading Style Sheets</dd>
+              <dt>JS</dt>
+              <dd>JavaScript</dd>
+              <dt>CLI</dt>
+              <dd>Command Line Interface</dd>
+              <dt>GUI</dt>
+              <dd>Graphic User Interface</dd>
+            </dl>
          
           <hr>
-
-          <h3 id="cli-commands">Helpful CLI Commands:</h3>
-
-          <pre><code>
+           <h3 id="cli-commands">Helpful CLI Commands:</h3>
+           <pre><code>
 $ pwd (or simply "cd" on a Windows) // returns path to current directory
-
-$ ls (or "dir" on a Windows) // returns list of contents inside the current directory
-
-$ cd ..// move up one level into the parent directory
             
+$ ls (or "dir" on a Windows) // returns list of contents inside the current directory
+            
+$ cd ..// move up one level into the parent directory
+                        
 $ git clone https://github.com/hannashibata/studentsite // copies a remote repo to your local computer
-          </code></pre>
+            </code></pre>
 
           <hr>
 
           <h2 id="grid">Grid:</h2>
-          <h3 id="grid-system">Grid System</h3>
-          <p>Basic semantic grid system using percentage. Suggested minimum value for gutters: 2%, happy medium: 4%.</p>
-          <script src="https://gist.github.com/hannashibata/38509f967292b2382b61d67154973aa5.js"></script>
-
-
-          </div>
-        </div>
+            <h3 id="grid-system">Grid System</h3>
+            <p>Basic semantic grid system using percentage. Suggested minimum value for gutters: 2%, happy medium: 4%.</p>
+            <script src="https://gist.github.com/hannashibata/38509f967292b2382b61d67154973aa5.js"></script>
+        </div>  <!-- END div class="primary" -->
+          
+        </div>  <!-- END div class = "container two-col-sidebar" -->
     </section>
     
   </main>
