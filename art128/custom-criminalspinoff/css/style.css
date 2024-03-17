@@ -110,11 +110,18 @@ blockquote p {
     display: inline;
 }
 
-blockquote footer {
+blockquote cite {
+    display: block;
     font-weight: 800; 
     font-size: 75%;
     text-align: right;
 }
+
+blockquote cite:before {
+    content: "—";
+    margin-right: 0.25em;
+}
+
 
 /* LINKS */
 a {
