@@ -253,7 +253,7 @@ body { margin: 0;}
 }
 
 /* FOR DEMO PURPOSES ONLY*/
-body.demo {
+/* body.demo {
     padding-top: 2em;
 }
 
@@ -287,7 +287,7 @@ body.demo::before {
         background-color: #0099cc;
         content: "Extra Large (Desktop) Screen 1250px +"
     }
-}
+} */
 
 /* SEMANTIC GRID SYSTEM */
 .row > .column {
@@ -335,11 +335,11 @@ body.demo::before {
 }
 
 /* FOR DEMO PURPOSES ONLY */
-.demo .column {
+/* .demo .column {
     background: rgb(0 0 0 / .2);
     padding: 1em;
     text-align: center;
-}
+} */
 
 /* SITE HEADER */
 .site-header {
@@ -400,12 +400,13 @@ body.demo::before {
 
 /* SECTION */
 section {
-    padding: 3em 0;}
+    padding: 3em 0;
+}
 
 /* HERO */
 .hero {
     padding: 6em 4%;
-    background-color: rgb(0 0 0 /.1);
+    background-color: transparent;
     text-align: right;
     
 }
@@ -432,6 +433,12 @@ section {
     margin-left: auto;
     margin-right: auto;
 }
+
+/* PRODUCTS, BOOKS */
+.column.one-half {
+    display: block;
+}
+
 
 /* TOGGLE NAV */
 @media ( max-width: 767px) {
@@ -506,17 +513,17 @@ section {
 }
 
 #about {
-    background: rgb(0 0 0 /.05);
+    background-color: transparent;
 }
 
-.yellow-box {
-    background-color: #fdcd2e;
+.yellow-blurb  {
+    /* background-color: #fdcd2e; */
+    background-color: gainsboro;
+}
+
+.yellow-box  {
+    background-color: white;
     padding: 1.5em;
-}
-
-.yellow-blurb {
-    background-color: #fdcd2e;
-    padding: 1em;
 }
 
 .grid-breaker.feature {
@@ -530,20 +537,30 @@ section {
 }
 
 .yellow-box.testimonials {
-    margin-top: -700px;
+    margin-top: -600px;
 }
 
 .yellow-box.about {
-    margin-top: -550px;
+    margin-top: -500px;
 }
 
 .book {
     transform: scale(0.8);
     transform-origin: 50% 50%;
 }
+
+.column one-half {
+    /* QUESTION: content doesn't align center */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
 /* FOR DEV PURPOSES ONLY */
-body * {
+/* body * {
     background-color: rgba(0,0,0,.05);
     border: 1px solid rgba(0,0,0,.1);
     color: rgba(0,0,0,.5);
-}
+} */
