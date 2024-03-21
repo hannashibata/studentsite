@@ -12,12 +12,12 @@
             #IMAGES
         #COMPONENTS
             #BUTTONS
-    #BASE LAYOUT
+    #LAYOUT
         #SIMPLE RESET
         #MEDIQUERIES
         #CONTAINER
         #GRID SYSTEM
-    #BASE SITE
+    #SITE
         #SITE STRUCTURE
             #HEADER
                 #site-id (IDENTIFIER, LOGO)
@@ -28,7 +28,7 @@
             #TOGGLE-NAV (Default for Small Screens)
     #CUSTOM SITE CSS
 ---------------------------------*/
-/* TYPOGRAPHY */
+/* TYPOGRAPHY ---------- */
 /* Reference
     62.5%   => 10px
     68.2%   => 11px
@@ -47,8 +47,7 @@ body {
     color: black;
 } 
 
-/* HEADINGS
-    Based on a Traditional Typographic Scale
+/* HEADINGS (Traditional Typographic Scale)
     48, 36, 24, 21, 18, 16
  */
 
@@ -99,7 +98,7 @@ blockquote {
 
 blockquote:before {
     color: rgb(0 0 0/.5);
-    content: "\201C"; /* This is the Unicode for the left double quotation mark */
+    content: "\201C"; /* Left double quotation mark */
     font-size: 4em;
     line-height: 0.5;
     margin-left: -0.25em;
@@ -134,12 +133,15 @@ a:hover {
     text-decoration: underline;
 }
 
-/* HELPER CLASSES */
-
+/* MEDIA ---------- */
 /* IMAGES */
 img {
     max-width: 100%;
     height: auto;
+}
+
+.headshot img {
+    border-radius: 50%;
 }
 
 /* BUTTONS */
@@ -212,7 +214,7 @@ form input[type=submit]:hover {
     display: block;
 }
 
-/* LAYOUT */
+/* LAYOUT ---------- */
 
 /* SIMPLE RESET */
 * { box-sizing: border-box; }
@@ -251,43 +253,6 @@ body { margin: 0;}
         
     }
 }
-
-/* FOR DEMO PURPOSES ONLY*/
-/* body.demo {
-    padding-top: 2em;
-}
-
-body.demo::before {
-    content: "Small (Mobile) Screen Less than 768px";
-    background-color: #933;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    text-align: center;
-    color: white;
-    padding: .5em;
-}
-
-@media ( min-width: 768px) {
-    body.demo::before {
-        background-color: #bcb83d;
-        content: "Midsize (Tablet) Screen 768px – 1050px";
-    }
-}
-
-@media ( min-width: 1050px) {
-    body.demo::before {
-        background-color: #669933;
-        content: "Large (Notebook) Screen 1050px – 1250px";
-    }
-}
-
-@media ( min-width: 1250px) {
-    body.demo::before {
-        background-color: #0099cc;
-        content: "Extra Large (Desktop) Screen 1250px +"
-    }
-} */
 
 /* SEMANTIC GRID SYSTEM */
 .row > .column {
@@ -497,7 +462,7 @@ section {
     }
 }
 
-/* CUSTOM SITE CSS */
+/* CUSTOM SITE CSS ---------- */
 .section-title {
     text-align: left;
     margin-bottom: 1em;
@@ -514,6 +479,15 @@ section {
 
 #about {
     background-color: transparent;
+}
+.full-width {
+    z-index: -1;
+    min-width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
 }
 
 .yellow-blurb  {
@@ -537,11 +511,11 @@ section {
 }
 
 .yellow-box.testimonials {
-    margin-top: -600px;
+    margin-top: -800px;
 }
 
 .yellow-box.about {
-    margin-top: -500px;
+    margin-top: -600px;
 }
 
 .book {
@@ -557,10 +531,46 @@ section {
 
 }
 
+/* FOR DEMO PURPOSES ONLY ----- */
+/* body.demo {
+    padding-top: 2em;
+}
 
-/* FOR DEV PURPOSES ONLY */
-/* body * {
+body.demo::before {
+    content: "Small (Mobile) Screen Less than 768px";
+    background-color: #933;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    text-align: center;
+    color: white;
+    padding: .5em;
+}
+
+@media ( min-width: 768px) {
+    body.demo::before {
+        background-color: #bcb83d;
+        content: "Midsize (Tablet) Screen 768px – 1050px";
+    }
+}
+
+@media ( min-width: 1050px) {
+    body.demo::before {
+        background-color: #669933;
+        content: "Large (Notebook) Screen 1050px – 1250px";
+    }
+}
+
+@media ( min-width: 1250px) {
+    body.demo::before {
+        background-color: #0099cc;
+        content: "Extra Large (Desktop) Screen 1250px +"
+    }
+} */
+
+/* FOR DEV PURPOSES ONLY ----- */
+body * {
     background-color: rgba(0,0,0,.05);
     border: 1px solid rgba(0,0,0,.1);
     color: rgba(0,0,0,.5);
-} */
+}
