@@ -90,6 +90,10 @@ p {
     max-width: 38em;
 }
 
+html {
+    hanging-punctuation: first allow-end last;
+}
+
 blockquote {
     /* quotes: "\201C""\201D"; */
     color: black;
@@ -299,13 +303,6 @@ body { margin: 0;}
     }
 }
 
-/* FOR DEMO PURPOSES ONLY */
-/* .demo .column {
-    background: rgb(0 0 0 / .2);
-    padding: 1em;
-    text-align: center;
-} */
-
 /* SITE HEADER */
 .site-header {
     padding: 1em 0;
@@ -490,18 +487,24 @@ section {
     margin-right: -50vw;
 }
 
+.aboutimage {
+    display: block;
+    margin: 0 auto;
+}
+
 .yellow-blurb  {
     /* background-color: #fdcd2e; */
     background-color: gainsboro;
 }
 
-.yellow-box  {
+.gray-box  {
     background-color: white;
     padding: 1.5em;
 }
 
-.grid-breaker.feature {
-    max-width: 240px; 
+.feature {
+    max-width: 240px;
+    position: absolute;
 /* QUESTION: I don't know how to define the size */
 }
 
@@ -510,12 +513,14 @@ section {
 /* QUESTION: I don't know how to define the size */
 }
 
-.yellow-box.testimonials {
+@media ( min-width: 768px)  {
+.gray-box.testimonials {
     margin-top: -800px;
 }
 
-.yellow-box.about {
+.gray-box.about {
     margin-top: -600px;
+}
 }
 
 .book {
@@ -532,6 +537,12 @@ section {
 }
 
 /* FOR DEMO PURPOSES ONLY ----- */
+/* .demo .column {
+    background: rgb(0 0 0 / .2);
+    padding: 1em;
+    text-align: center;
+} */
+
 /* body.demo {
     padding-top: 2em;
 }
