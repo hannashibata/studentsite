@@ -492,7 +492,7 @@ section {
     margin: 0 auto;
 }
 
-.yellow-blurb  {
+.blurb  {
     /* background-color: #fdcd2e; */
     background-color: gainsboro;
 }
@@ -580,8 +580,8 @@ body.demo::before {
 } */
 
 /* FOR DEV PURPOSES ONLY ----- */
-body * {
+/* body * {
     background-color: rgba(0,0,0,.05);
     border: 1px solid rgba(0,0,0,.1);
     color: rgba(0,0,0,.5);
-}
+} */
