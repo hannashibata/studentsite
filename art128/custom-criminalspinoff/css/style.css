@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* BASE CSS (Initial Setup)
+/* CRIMINAL SPINOFF: BASE CSS (Initial Setup)
 ---------------------------------
     #BASE CONTENT
         #TYPOGRAPHY
@@ -38,18 +38,17 @@
     100%    => 16px
     112.5%  => 18px
     125%    => 20px
-    */
+
+    /* HEADINGS (Traditional Typographic Scale)
+       48, 36, 24, 21, 18, 16
+----------------------- */
 
 body {
     font-size: 87.5%;   /* 14px */
     font-family: Helvetica, Arial, sans-serif;
-    line-height: 1.5;  /* 14px x 1.5 = 21px */
+    line-height: 1.35;  /* 14px x 1.35 = 18.9px */
     color: black;
 } 
-
-/* HEADINGS (Traditional Typographic Scale)
-    48, 36, 24, 21, 18, 16
- */
 
  h1, h2, h3, h4, h5, h6 {
     margin: 0.5em 0;
@@ -90,33 +89,33 @@ p {
     max-width: 38em;
 }
 
-html {
-    hanging-punctuation: first allow-end last;
-    /* QUESTION: This doesn't seems to work */
-}
-
 blockquote {
     /* quotes: "\201C""\201D"; */
     color: black;
-    margin: 0;
+    margin: 0.75em;
+    position: relative;
 }
 
 blockquote:before {
-    color: rgb(0 0 0/.5);
+    color: rgb(0 0 0/.3);
     content: "\201C"; /* Left double quotation mark */
-    font-size: 4em;
-    line-height: 0.5;
-    margin-left: -0.25em;
-    vertical-align: -0.1em;
+    font-size: 4em; /* 64px (1em = 16px) */
+    line-height: 0.6;
+    /* background-color: pink; */
+    position: absolute; 
+    top: 0;
+    left: -0.45em;
   }
 
 blockquote p {
-    display: block;
-    /* QUESTION: display:block; gets rid of indentation but the overall layout is changed */
+    z-index: 10;
+    position: relative;
+    margin: 0;
 }
 
 blockquote cite {
     display: block;
+    margin: 0.25em;
     font-weight: 800; 
     font-size: 75%;
     text-align: right;
@@ -126,7 +125,6 @@ blockquote cite:before {
     content: "—";
     margin-right: 0.25em;
 }
-
 
 /* LINKS */
 a {
@@ -139,6 +137,7 @@ a:hover {
     text-decoration: underline;
 }
 
+
 /* MEDIA ---------- */
 /* IMAGES */
 img {
@@ -150,6 +149,8 @@ img {
     border-radius: 50%;
 }
 
+
+/* COMPONENTS ---------- */
 /* BUTTONS */
 .button {
     max-width: 240px;
@@ -232,7 +233,6 @@ body { margin: 0;}
     margin: 0 auto;
     padding: 0 4%;
 }
-
 
 /* MEDIA QUERIES */
 /* phone -> tablet -> laptop -> desktop */
@@ -384,7 +384,6 @@ section {
     padding: 60px 0 0 0;
 }
 
-
 .hero-shot {
     margin-top: -40px;
     transform: scale(1.3);
@@ -402,7 +401,6 @@ section {
 .column.one-half {
     display: block;
 }
-
 
 /* TOGGLE NAV */
 @media ( max-width: 767px) {
@@ -461,10 +459,11 @@ section {
     }
 }
 
+
 /* CUSTOM SITE CSS ---------- */
 .section-title {
     text-align: left;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
 }
 
 .site-header {
@@ -472,21 +471,51 @@ section {
     background-color: transparent;
 }
 
-.site-header.fixed + main {
-    padding-top: 3em;
+/* BOOKS SECTION*/
+.animation {
+    margin-top: -4em;
 }
 
+.anim-paramedics {
+
+}
+
+.anim-palace {
+    margin-left: -10em;
+}
+
+.blurb  {
+    /* background-color: #fdcd2e; */
+    background-color: gainsboro;
+    padding: 0.5em;
+    position: relative;
+}
+
+.blurb::after {
+    --blurb-borderwidth: 2px;
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    width: calc(100% - (2 * var(--blurb-borderwidth)));
+    height: calc(100% - (2 * var(--blurb-borderwidth)));
+    border: var(--blurb-borderwidth) solid rgb(8 8 8 /.5);
+}
+
+.p-blurb {
+    font-size: 87.5%;   /* 14px */
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 1.4;  /* 1px x 1.4 = 16.8px */
+    color: black;
+    max-width: 12em;
+    display: flex;
+    justify-content: center;
+    align-items: center;  /* QUESTION: doesn't align (>_<) */
+}
+
+/* ABOUT SECTION */
 #about {
     background-color: transparent;
-}
-.full-width {
-    z-index: -1;
-    min-width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
 }
 
 .aboutimage {
@@ -494,14 +523,9 @@ section {
     margin: 0 auto;
 }
 
-.blurb  {
-    /* background-color: #fdcd2e; */
-    background-color: gainsboro;
-}
-
-.gray-box  {
+.white-box  {
     background-color: white;
-    padding: 1.5em;
+    padding: 2em;
 }
 
 @media (min-width: 768px) {
@@ -509,7 +533,6 @@ section {
     .container-lavender,
     .container-palace {
         position: relative;
-        /* max-width: 1180px; */
         /* padding-right: calc(120px + 4%); */
         margin-top: 120px;
         margin-bottom: 300px;
@@ -533,13 +556,13 @@ section {
     .feature-kevin {
         bottom: 0;
         left: 50%;
-        transform: translate(-50%, 50%);
+        transform: translate(-70%, 50%);
     }
 
     .feature-helen {
         bottom: 0;
         left: 50%;
-        transform: translate(-80%, 50%);
+        transform: translate(-100%, 50%);
     }
 
     .feature-benjamin {
@@ -549,24 +572,23 @@ section {
     }
 }
 
-.blurb {
-    padding: 1em;
-/* QUESTION: I don't know how to define the size */
-}
-
 @media ( min-width: 768px)  {
-.gray-box.testimonials {
-    margin-top: -800px;
-}
+    .white-box.testimonials {
+        margin-top: -800px;
+    }
 
-.gray-box.about {
-    margin-top: -600px;
-}
+    .white-box.about {
+        margin-top: -600px;
+    }
 }
 
 .book {
     /* transform: scale(0.8);
     transform-origin: 50% 50%; */
+    /* QUESTION: content doesn't align center */
+    display: block;
+    justify-content: center;
+    align-items: center;
 }
 
 .column one-half {
@@ -574,51 +596,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
-
-/* FOR DEMO PURPOSES ONLY ----- */
-/* .demo .column {
-    background: rgb(0 0 0 / .2);
-    padding: 1em;
-    text-align: center;
-} */
-
-/* body.demo {
-    padding-top: 2em;
-}
-
-body.demo::before {
-    content: "Small (Mobile) Screen Less than 768px";
-    background-color: #933;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    text-align: center;
-    color: white;
-    padding: .5em;
-}
-
-@media ( min-width: 768px) {
-    body.demo::before {
-        background-color: #bcb83d;
-        content: "Midsize (Tablet) Screen 768px – 1050px";
-    }
-}
-
-@media ( min-width: 1050px) {
-    body.demo::before {
-        background-color: #669933;
-        content: "Large (Notebook) Screen 1050px – 1250px";
-    }
-}
-
-@media ( min-width: 1250px) {
-    body.demo::before {
-        background-color: #0099cc;
-        content: "Extra Large (Desktop) Screen 1250px +"
-    }
-} */
 
 /* FOR DEV PURPOSES ONLY ----- */
 /* body * {
