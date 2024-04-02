@@ -92,12 +92,13 @@ p {
 
 html {
     hanging-punctuation: first allow-end last;
+    /* QUESTION: This doesn't seems to work */
 }
 
 blockquote {
     /* quotes: "\201C""\201D"; */
     color: black;
-    margin: 20px 0;
+    margin: 0;
 }
 
 blockquote:before {
@@ -110,7 +111,8 @@ blockquote:before {
   }
 
 blockquote p {
-    display: inline;
+    display: block;
+    /* QUESTION: display:block; gets rid of indentation but the overall layout is changed */
 }
 
 blockquote cite {
@@ -502,10 +504,49 @@ section {
     padding: 1.5em;
 }
 
-.feature {
-    max-width: 240px;
-    position: absolute;
-/* QUESTION: I don't know how to define the size */
+@media (min-width: 768px) {
+    .container-paramedics,
+    .container-lavender,
+    .container-palace {
+        position: relative;
+        /* max-width: 1180px; */
+        /* padding-right: calc(120px + 4%); */
+        margin-top: 120px;
+        margin-bottom: 300px;
+    }
+
+    .feature {
+        max-width: 240px;
+        position: absolute;
+    }
+
+    .feature-john {
+        top: -120px;
+        right: 0;
+    }
+
+    .feature.blurb-up {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .feature-kevin {
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+
+    .feature-helen {
+        bottom: 0;
+        left: 50%;
+        transform: translate(-80%, 50%);
+    }
+
+    .feature-benjamin {
+        bottom: 0;
+        left: 50%;
+        transform: translate(-70%, 20%);
+    }
 }
 
 .blurb {
@@ -524,8 +565,8 @@ section {
 }
 
 .book {
-    transform: scale(0.8);
-    transform-origin: 50% 50%;
+    /* transform: scale(0.8);
+    transform-origin: 50% 50%; */
 }
 
 .column one-half {
