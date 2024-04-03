@@ -472,23 +472,29 @@ section {
 }
 
 /* BOOKS SECTION*/
-.animation {
-    margin-top: -4em;
+@media (min-width: 768px) {
+
+    .animation {
+        margin-top: -4em;
+    }
+
+    .anim-paramedics {
+
+    }
+
+    .anim-palace {
+        margin-left: -10em;
+    }
+
 }
 
-.anim-paramedics {
-
-}
-
-.anim-palace {
-    margin-left: -10em;
-}
-
-.blurb  {
+.blurb,
+.blurb-alt {
     /* background-color: #fdcd2e; */
     background-color: gainsboro;
     padding: 0.5em;
     position: relative;
+    aspect-ratio: 1 / 1;
 }
 
 .blurb::after {
@@ -499,7 +505,18 @@ section {
     left: -8px;
     width: calc(100% - (2 * var(--blurb-borderwidth)));
     height: calc(100% - (2 * var(--blurb-borderwidth)));
-    border: var(--blurb-borderwidth) solid rgb(8 8 8 /.5);
+    border: var(--blurb-borderwidth) solid rgb(120 120 120 /1);
+}
+
+.blurb-alt::after {
+    --blurb-borderwidth: 2px;
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: -8px;
+    width: calc(100% - (2 * var(--blurb-borderwidth)));
+    height: calc(100% - (2 * var(--blurb-borderwidth)));
+    border: var(--blurb-borderwidth) solid rgb(120 120 120 /1);
 }
 
 .p-blurb {
@@ -507,11 +524,11 @@ section {
     font-family: Helvetica, Arial, sans-serif;
     line-height: 1.4;  /* 1px x 1.4 = 16.8px */
     color: black;
-    max-width: 12em;
     display: flex;
     justify-content: center;
     align-items: center;  /* QUESTION: doesn't align (>_<) */
 }
+
 
 /* ABOUT SECTION */
 #about {
@@ -526,6 +543,12 @@ section {
 .white-box  {
     background-color: white;
     padding: 2em;
+}
+
+@media (max-width: 767px) {
+    .feature {
+        margin-bottom: 3em;
+    }
 }
 
 @media (min-width: 768px) {
