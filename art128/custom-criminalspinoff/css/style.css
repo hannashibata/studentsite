@@ -734,8 +734,8 @@ section {
 }
 
 /* FOR DEV PURPOSES ONLY ----- */
-body * {
+/* body * {
     background-color: rgba(0,0,0,.05);
     border: 1px solid rgba(0,0,0,.1);
     color: rgba(0,0,0,.5);
-}
+} */
