@@ -391,7 +391,7 @@ img {
     flex-grow: 1;
   }
 
-  .row.swappit {
+  .row.swapped {
     flex-direction: row-reverse;
   }
 
