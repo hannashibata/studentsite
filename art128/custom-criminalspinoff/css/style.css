@@ -514,12 +514,14 @@ section {
 .blurb-alt {
     /* background-color: #fdcd2e; */
     background-color: gainsboro;
-    padding: 0.5em;
+    padding: 1.5em;
     position: relative;
     aspect-ratio: 1 / 1;
 }
 
-.blurb::after {
+.blurb::after,
+.white-box.testimonials::after
+/* QUESTION: white-box is not working?? */ {
     --blurb-borderwidth: 2px;
     content: "";
     position: absolute;
