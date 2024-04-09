@@ -96,7 +96,6 @@ h5,
 h6,
 p {
     font-family: 'Montserrat', sans-serif;
-    /* QUESTION: the blurb p does not inherit?? */
 }
 
 /* PARAGRAPHS */
@@ -146,7 +145,7 @@ blockquote p {
 blockquote cite {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    /* The font won't get bold */
+    /* QUESTION: The font won't get bold */
     display: block;
     margin: 0.25em;
     font-weight: 800; 
@@ -190,14 +189,14 @@ img {
     font-family: 'Oswald', sans-serif;
     font-size: inherit;
     line-height: 1;
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
     border: 2px solid #ff342c;
     background-color: #ff342c;
     color: black;
     padding: 1em;
     margin: .5em .5em .5em 0;
-    display: inline-block;
-    text-align: center;
-    text-transform: uppercase;
     border-radius: 0.1em;
 }
 
@@ -221,7 +220,6 @@ img {
 }
 
 .button-text {
-    /* background-color: green; */
     font-size: 75%;    /* 12px */
     line-height: 1.2;
     padding: 0.3em;
@@ -235,6 +233,7 @@ img {
     line-height: 1;
 }
 
+/* FORM STYLING */
 form input[type=submit] {
     border: 2px solid black;
     background-color: black;
@@ -252,6 +251,11 @@ form input[type=submit]:hover {
     color: black;
     text-decoration: none;
 }
+
+#contact_email {
+    min-width: 35ch;
+}
+
 
 /* .button.standalone {
     display: block;
@@ -318,50 +322,6 @@ body { margin: 0;}
     margin-bottom: 4%;
 }
 
-/* @media ( min-width: 768px) {
-
-    .row {
-        display: flex;
-        justify-content: space-between;
-        margin-left: -2%;
-        margin-right: -2%
-    }
-    
-    .row.swapped {
-        flex-direction: row-reverse;
-    }
-    .row > .column {
-        flex-grow: 1;
-        margin-left: 2%;
-        margin-right: 2%;
-    }
-
-    .row > .column.one-half {
-        max-width: 46%;
-    }
-
-    .row > .column.one-third {
-        max-width: 29.3333%;
-    }
-
-    .row > .column.two-thirds {
-        max-width: 62.6666%;
-    }
-
-    .row > .column.one-fourth {
-        max-width: 21%;
-    }
-
-    .row > .column.centered {
-        margin-left: auto;
-        margin-right: auto;
-    }
-} */
-
-/* RESET */
-* { box-sizing: border-box; }
-body { margin: 0; }
-
 /* RESPONSIVE IMAGE */
 img {
   max-width: 100%;
@@ -379,15 +339,12 @@ img {
   .row {
     display: flex;
     justify-content: space-between;
-/*  align-items: center; */
     gap: var(--gridgap);
     padding: 0;
-    margin: var(--gridgap);
-/*  background-color: pink; */
+    margin: var(--gridgap) 0;
   }
 
   .row > * {
-/*  border: solid 1px red; */
     flex-grow: 1;
   }
 
@@ -400,7 +357,6 @@ img {
   .row .two-thirds { max-width: calc( 66.6666% - var(--gridgap-half) ); }
   
 }
-
 
 /* SITE HEADER */
 .site-header {
@@ -460,6 +416,32 @@ img {
     display: none;
 }
 
+.site-footer .footer-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.site-footer .footer-nav li {
+    margin: 3em 0;
+    padding: 1em;
+    text-align: center;
+}
+
+@media (min-width: 767px) {
+    .site-footer .footer-nav ul {
+        background-color: pink;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 3fr;
+        align-items: center;
+    }
+
+    .site-footer .footer-nav li:last-child {
+        background-color: green;
+        text-align: right;
+    }
+}
+
 /* SECTION */
 section {
     padding: 3em 0;
@@ -470,7 +452,6 @@ section {
     padding: 6em 0;
     background-color: transparent;
     text-align: right;
-    /* QUESTION: buttons don't align */
 }
 
 .one-third.column.hero {
