@@ -169,6 +169,14 @@ a:hover {
     text-decoration: underline;
 }
 
+/* HELPER */
+html {
+    --my-black: rgb(0 0 0 /1);
+    --my-red: #ff342c; 
+    --my-peach: #FED6CE;;
+    --my-diagnal: rgb(0 200 100 /.5);
+    /* green for now */
+}
 
 /* MEDIA ---------- */
 /* IMAGES */
@@ -647,12 +655,12 @@ section {
 }
 
 @media (min-width: 768px) {
-    .container-firstbook,
-    .container-secondbook,
-    .container-thirdbook {
+    .container-book01,
+    .container-book02,
+    .container-book03 {
         position: relative;
         /* padding-right: calc(120px + 4%); */
-        margin-top: 120px;
+        padding-top: 120px;
         margin-bottom: 300px;
     }
 
@@ -714,9 +722,103 @@ section {
     align-items: center;
 }
 
+/* BACKGROUND IMAGES */
+.hero { position: relative; }
+.hero::before {
+    content: '';
+    background-color: var(--my-diagnal);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(0 0, 80% 0, 0 30%);
+}
+
+.hero::after {
+    content: '';
+    background-color: var(--my-diagnal);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 101%;
+    z-index: -1;
+    clip-path: polygon(0 60%, 100% 80%, 100% 100%, 0% 100%);
+}
+
+#books {
+    padding-top: 0;
+}
+
+.book01 { position: relative; }
+.book01::before {
+    content: '';
+    background-color: var(--my-diagnal);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 70%);
+}
+
+.book01::after {
+    content: '';
+    background-color: var(--my-diagnal);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 101%;
+    z-index: -1;
+    clip-path: polygon(0 75%, 100% 95%, 100% 100%, 0% 100%);
+}
+
+.book02 { position: relative; }
+.book02::before {
+    content: '';
+    background-color: var(--my-diagnal);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 101%;
+    z-index: -1;
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 75%);
+}
+
+.book02::after {
+    content: '';
+    background-color: var(--my-diagnal);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 101%;
+    z-index: -1;
+    clip-path: polygon(0 78%, 100% 98%, 100% 100%, 0% 100%);
+}
+
+.book03 { position: relative; }
+.book03::before {
+    content: '';
+    background-color: var(--my-diagnal);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 101%;
+    z-index: -1;
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 75%);
+}
+
+
 /* FOR DEV PURPOSES ONLY ----- */
-/* body * {
+body * {
     background-color: rgba(0,0,0,.05);
     border: 1px solid rgba(0,0,0,.1);
     color: rgba(0,0,0,.5);
-} */
+}
