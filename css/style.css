@@ -74,6 +74,29 @@ a:hover::before {
     transform: scaleX(1);
 }
 
+/* COMPONENTS ---------- */
+/* BUTTONS */
+/* .button {
+    font-size: inherit;
+    line-height: 1;
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    border: 2px solid var(--my-pink);
+    background-color: var(--my-pink);
+    color: var(--my-pink);
+    padding: 1em;
+    margin: .5em .5em .5em 0;
+    border-radius: 0.1em;
+}
+
+.button:hover {
+    border: 2px solid var(--my-pink);
+    background-color: rgb(0 0 0 /0);
+    color: var(--my-pink);
+    text-decoration: none;
+} */
+
 /* GENERAL LISTS */
 ul, ol {
     padding-left: 1.5em;
