@@ -174,8 +174,7 @@ html {
     --my-black: rgb(0 0 0 /1);
     --my-red: #ff342c; 
     --my-peach: #FED6CE;;
-    --my-diagnal: rgb(0 200 100 /.5);
-    /* green for now */
+    --my-diagnal: black;    /* placeholdercolor -> rgb(0 200 100 /.5);  */
 }
 
 /* MEDIA ---------- */
@@ -188,7 +187,6 @@ img {
 .headshot img {
     border-radius: 50%;
 }
-
 
 /* COMPONENTS ---------- */
 /* BUTTONS */
@@ -575,6 +573,10 @@ section {
 
 }
 
+.description {
+    color: white;
+}
+
 .p-blurb {
     font-size: 87.5%;   /* 14px */
     line-height: 1.4;  /* 1px x 1.4 = 16.8px */
@@ -681,19 +683,19 @@ section {
     .feature-kevin {
         bottom: 0;
         left: 50%;
-        transform: translate(-70%, 50%);
+        transform: translate(-70%, -20%);
     }
 
     .feature-helen {
         bottom: 0;
         left: 50%;
-        transform: translate(-100%, 50%);
+        transform: translate(-100%, -20%);
     }
 
     .feature-benjamin {
         bottom: 0;
         left: 50%;
-        transform: translate(-70%, 50%);
+        transform: translate(-70%, -20%);
     }
 }
 
