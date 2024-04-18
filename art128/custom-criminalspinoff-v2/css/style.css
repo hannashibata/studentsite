@@ -591,18 +591,8 @@ section {
     color: white;
 }
 
-.p-blurb {
-    font-size: 87.5%;   /* 14px */
-    line-height: 1.4;  /* 1px x 1.4 = 16.8px */
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 /* OFFSET LINES FOR BOOKS & ABOUT SECTION */
-/* QUESTION: How can I add texture to the offset lines? */
-/* QUESTION: How can I add the carrot and make it look like speach bubble? */
+/* css blurbs markups are "blurb-css" and "blurb-alt-css" */
 .blurb,
 .blurb-alt {
     background-color: gainsboro;
@@ -615,9 +605,33 @@ section {
     position: relative;
 }
 
-.blurb-svg {
+.blurb-up {
     background-image: url(../img/blurb-up.svg);
-    aspect-ratio: 4/5;
+    aspect-ratio: 1/1;
+    background-repeat: no-repeat;
+    border: 1px solid red;
+}
+
+.blurb-down {
+    background-image: url(../img/blurb-down.svg);
+    aspect-ratio: 1/1;
+    background-repeat: no-repeat;
+    border: 1px solid red;
+}
+
+.p-blurb {
+    font-size: 87.5%;   /* 14px */
+    line-height: 1.4;  /* 1px x 1.4 = 16.8px */
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: pink; */
+    margin: 0;
+    padding: 2.5em;
+}
+.blurb-down .p-blurb {
+    padding-top: 5.5em;
 }
 
 .blurb::after,
