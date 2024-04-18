@@ -2,7 +2,7 @@
 /* CRIMINAL SPINOFF: BASE CSS (Initial Setup)
 ---------------------------------
     #BASE CONTENT
-        #TYPOGRAPHY
+        #TYPOGRAPHY (line 39)
             #BODY
             #HEADINGS
             #PARAGRAPHS
@@ -10,17 +10,17 @@
             #HELPER
         #MEDIA
             #IMAGES
-        #COMPONENTS
+        #COMPONENTS  (line 191)
             #BUTTONS
-    #LAYOUT
+    #LAYOUT (line 301)
         #SIMPLE RESET
         #MEDIQUERIES
         #CONTAINER
         #GRID SYSTEM
-    #SITE
+    #SITE (line 379)
         #SITE STRUCTURE
             #HEADER
-                #site-id (IDENTIFIER, LOGO)
+                #site-id
             #FOOTER
             #SECTIONS
             #SUB PAGES
@@ -28,7 +28,14 @@
             #TOGGLE-NAV (Default for Small Screens)
     #CUSTOM SITE CSS
 ---------------------------------*/
-/* TYPOGRAPHY ---------- */
+/* --------------------------- BASE CONTENT --------------------------- */
+html {
+    --my-black: rgb(0 0 0 /1);
+    --my-red: #ff342c; 
+    --my-peach: #fed6ce;
+}
+
+/* --------------------------- TYPOGRAPHY --------------------------- */
 /* Reference
     62.5%   => 10px
     68.2%   => 11px
@@ -42,7 +49,6 @@
     /* HEADINGS (Traditional Typographic Scale)
        48, 36, 24, 21, 18, 16
 ----------------------- */
-
 body {
     font-size: 87.5%;   /* 14px */
     line-height: 1.35;  /* 14px x 1.35 = 18.9px */
@@ -119,7 +125,7 @@ p {
 
 /* BLOCKQUOTE */
 blockquote {
-    color: black;
+    color: var(--my-black);
     margin: 0.75em;
     position: relative;
 }
@@ -160,7 +166,7 @@ blockquote cite:before {
 
 /* LINKS */
 a {
-    color: black;
+    color: var(--my-black);
     cursor: pointer;
     text-decoration: none;
 }
@@ -169,15 +175,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* HELPER */
-html {
-    --my-black: rgb(0 0 0 /1);
-    --my-red: #ff342c; 
-    --my-peach: #FED6CE;;
-    --my-diagnal: black;    /* placeholdercolor -> rgb(0 200 100 /.5);  */
-}
-
-/* MEDIA ---------- */
+/* --------------------------- MEDIA --------------------------- */
 /* IMAGES */
 img {
     max-width: 100%;
@@ -188,7 +186,7 @@ img {
     border-radius: 50%;
 }
 
-/* COMPONENTS ---------- */
+/* --------------------------- COMPONENTS --------------------------- */
 /* BUTTONS */
 .button {
     /* max-width: 240px; */
@@ -198,31 +196,31 @@ img {
     display: inline-block;
     text-align: center;
     text-transform: uppercase;
-    border: 2px solid #ff342c;
-    background-color: #ff342c;
-    color: black;
+    border: 2px solid var(--my-red);
+    background-color: var(--my-red);
+    color: var(--my-black);
     padding: 1em;
     margin: .5em 0;
     border-radius: 0.1em;
 }
 
 .button:hover {
-    border: 2px solid #ff342c;
+    border: 2px solid var(--my-red);
     background-color: rgb(0 0 0 /0);
-    color: #ff342c;
+    color: var(--my-red);
     text-decoration: none;
 }
 
 .button.alt {
-    border: 2px solid #FED6CE;
-    background-color: #FED6CE;
-    color: black;
+    border: 2px solid var(--my-peach);
+    background-color: var(--my-peach);
+    color: var(--my-black);
 }
 
 .button.alt:hover {
-    border: 2px solid #FED6CE;
+    border: 2px solid var(--my-peach);
     background-color: rgb(0 0 0 /0);
-    color: #FED6CE;
+    color: var(--my-peach);
 }
 
 .button-text {
@@ -240,9 +238,10 @@ img {
 }
 
 /* FORM STYLING */
+/* QUESTION: how can I make the get newsletter part bigger and align with logos? */
 form input[type=submit] {
-    border: 2px solid black;
-    background-color: black;
+    border: 2px solid var(--my-black);
+    background-color: var(--my-black);
     color: white;
     text-decoration: none;
     font-family: "veneer-three", sans-serif;
@@ -252,16 +251,15 @@ form input[type=submit] {
 }
 
 form input[type=submit]:hover {
-    border: 2px solid black;
+    border: 2px solid var(--my-black);
     background-color: rgb(0 0 0 /0);
-    color: black;
+    color: var(--my-black);
     text-decoration: none;
 }
 
 #contact_email {
     min-width: 35ch;
 }
-
 
 /* .button.standalone {
     display: block;
@@ -298,9 +296,7 @@ form input[type=submit]:hover {
     margin-left: auto;
 }
 
-
-/* LAYOUT ---------- */
-
+/* --------------------------- LAYOUT --------------------------- */
 /* SIMPLE RESET */
 * { box-sizing: border-box; }
 body { margin: 0;}
@@ -378,7 +374,7 @@ img {
   
 }
 
-/* SITE -------------------- */
+/* --------------------------- SITE --------------------------- */
 /* SITE HEADER */
 .site-header {
     padding: 1em 0;
@@ -395,13 +391,13 @@ img {
 
 /* STYYLING FOR HEADER & FOOTER */
 .site-header a {
-    color:  black;
+    color: var(--my-black);
     font-family: 'Oswald', sans-serif;
 }
 
-/* .site-footer {
-    background-color: var(--my-diagnal);
-} */
+.site-footer {
+    background-color: var(--my-black);
+}
 
 .site-header a:hover,
 .site-footer a:hover {
@@ -447,8 +443,8 @@ img {
 }
 
 .site-footer .footer-nav li {
-    margin: 3em 0;
-    padding: 1em;
+    margin: 0;
+    padding: 4em 1em;
     text-align: center;
 }
 
@@ -496,7 +492,7 @@ section {
     margin-right: auto;
 }
 
-/* PRODUCTS, BOOKS */
+/* BOOKS */
 .column.one-half {
     display: block;
 }
@@ -558,8 +554,7 @@ section {
     }
 }
 
-
-/* CUSTOM SITE CSS ---------- */
+/* --------------------------- CUSTOM SITE CSS --------------------------- */
 .section-title {
     text-align: left;
     margin-bottom: 0.5em;
@@ -570,7 +565,12 @@ section {
     background-color: transparent;
 }
 
-/* BOOKS SECTION */
+/* SECTION #BOOKS */
+.description {
+    color: white;
+}
+
+/* ANIMATION AND FEATURED CHARACTERS */
 @media (min-width: 768px) {
 
     .animation {
@@ -587,12 +587,63 @@ section {
 
 }
 
-.description {
-    color: white;
+@media (max-width: 767px) {
+
+    .feature {
+        margin-bottom: 3em;
+    }
+
 }
 
-/* OFFSET LINES FOR BOOKS & ABOUT SECTION */
-/* css blurbs markups are "blurb-css" and "blurb-alt-css" */
+@media (min-width: 768px) {
+
+    .container-book01,
+    .container-book02,
+    .container-book03 {
+        position: relative;
+        padding-top: 120px;
+        padding-bottom: 300px;
+    }
+
+    .feature {
+        max-width: 240px;
+        position: absolute;
+    }
+
+    .feature-john {
+        top: 0px;
+        right: 0;
+    }
+
+    .feature.blurb-up {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .feature-kevin {
+        bottom: 0;
+        left: 45%;
+        transform: translate(-70%, -20%);
+    }
+
+    .feature-helen {
+        bottom: 0;
+        left: 50%;
+        transform: translate(-100%, -20%);
+    }
+
+    .feature-benjamin {
+        bottom: 0;
+        left: 50%;
+        transform: translate(-80%, 0%);
+    }
+
+}
+
+/* OFFSET LINES IN SECTION #BOOKS & #ABOUT ---------- */
+/* QUESTION: blurbs needs more adjustments */
+
+/* CSS BLURBS (blurb-css & blurb-alt-css) */
 .blurb,
 .blurb-alt {
     background-color: gainsboro;
@@ -605,14 +656,15 @@ section {
     position: relative;
 }
 
-.blurb-up {
+/* SVG BLURBS */
+.blurb-up-svg {
     background-image: url(../img/blurb-up.svg);
     aspect-ratio: 1/1;
     background-repeat: no-repeat;
     border: 1px solid red;
 }
 
-.blurb-down {
+.blurb-down-svg {
     background-image: url(../img/blurb-down.svg);
     aspect-ratio: 1/1;
     background-repeat: no-repeat;
@@ -622,16 +674,17 @@ section {
 .p-blurb {
     font-size: 87.5%;   /* 14px */
     line-height: 1.4;  /* 1px x 1.4 = 16.8px */
-    color: black;
+    color: var(--my-black);
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: pink; */
+    border: 2px solid blue;
     margin: 0;
     padding: 2.5em;
 }
+
 .blurb-down .p-blurb {
-    padding-top: 5.5em;
+    padding-top: 5em;
 }
 
 .blurb::after,
@@ -668,15 +721,29 @@ section {
     border: var(--blurb-borderwidth) solid rgb(120 120 120 /1);
 }
 
-/* ABOUT SECTION */
+/* SECTION #ABOUT */
 #about {
-    background-color: transparent;
-    padding: 0;
+    background-color: var(--my-black);
+    padding: 0 0 0 0;
+    position: relative;
+    border-bottom: 200px solid var(--my-black);
 }
 
-.aboutimage {
-    display: block;
-    margin: 0 auto;
+@media (min-width: 768px) {
+    .aboutimage {
+        display: block;
+        margin: 0 auto;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+#about .row {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .white-box  {
@@ -684,64 +751,15 @@ section {
     padding: 2em;
 }
 
-@media (max-width: 767px) {
-    .feature {
-        margin-bottom: 3em;
-    }
-}
-
-@media (min-width: 768px) {
-    .container-book01,
-    .container-book02,
-    .container-book03 {
-        position: relative;
-        /* padding-right: calc(120px + 4%); */
-        padding-top: 120px;
-        padding-bottom: 300px;
-    }
-
-    .feature {
-        max-width: 240px;
-        position: absolute;
-    }
-
-    .feature-john {
-        top: -120px;
-        right: 0;
-    }
-
-    .feature.blurb-up {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-
-    .feature-kevin {
-        bottom: 0;
-        left: 50%;
-        transform: translate(-70%, -20%);
-    }
-
-    .feature-helen {
-        bottom: 0;
-        left: 50%;
-        transform: translate(-100%, -20%);
-    }
-
-    .feature-benjamin {
-        bottom: 0;
-        left: 50%;
-        transform: translate(-80%, -20%);
-    }
-}
-
 /* TESTIMONIALS & ABOUT WHITE BOXES LAYOUT */
+/* QUESTION: How can I change it to absolute position instead of negative margins? */
 @media ( min-width: 768px)  {
     .white-box.testimonials {
-        margin-top: -850px;
+        margin-top: -50px;
     }
 
     .white-box.about {
-        margin-top: -700px;
+        margin-top: 300px;
     }
 }
 
@@ -759,11 +777,11 @@ section {
     align-items: center;
 }
 
-/* BACKGROUND IMAGES */
+/* BACKGROUND GRAPHIC */
 .hero { position: relative; }
 .hero::before {
     content: '';
-    background-color: var(--my-diagnal);
+    background-color: var(--my-black);
     position: absolute;
     top: 0;
     left: 0;
@@ -775,7 +793,7 @@ section {
 
 .hero::after {
     content: '';
-    background-color: var(--my-diagnal);
+    background-color: var(--my-black);
     position: absolute;
     top: 0;
     left: 0;
@@ -793,7 +811,7 @@ section {
 .book01 { position: relative; }
 .book01::before {
     content: '';
-    background-color: var(--my-diagnal);
+    background-color: var(--my-black);
     position: absolute;
     top: 0;
     left: 0;
@@ -805,7 +823,7 @@ section {
 
 .book01::after {
     content: '';
-    background-color: var(--my-diagnal);
+    background-color: var(--my-black);
     position: absolute;
     top: 0;
     left: 0;
@@ -818,7 +836,7 @@ section {
 .book02 { position: relative; }
 .book02::before {
     content: '';
-    background-color: var(--my-diagnal);
+    background-color: var(--my-black);
     position: absolute;
     top: 0;
     left: 0;
@@ -830,7 +848,7 @@ section {
 
 .book02::after {
     content: '';
-    background-color: var(--my-diagnal);
+    background-color: var(--my-black);
     position: absolute;
     top: 0;
     left: 0;
@@ -843,10 +861,11 @@ section {
 .book03 { 
     position: relative;
     padding-bottom: 20em; /* REFACTOR: consider fixing bottom-margin */
+    background-color: var(--my-black);
 }
-.book03::before {
+/* .book03::before {
     content: '';
-    background-color: var(--my-diagnal);
+    background-color: var(--my-black);
     position: absolute;
     top: 0;
     left: 0;
@@ -858,7 +877,7 @@ section {
 
 .book03::after {
     content: '';
-    background-color: var(--my-diagnal);
+    background-color: var(--my-black);
     position: absolute;
     top: 0;
     left: 0;
@@ -866,12 +885,12 @@ section {
     height: 101%;
     z-index: -1;
     clip-path: polygon(0 81%, 100% 96%, 100% 100%, 0% 100%);
-}
+} */
 
-.aboutimage { position: relative; }
+/* .aboutimage { position: relative; }
 .aboutimage::before {
     content: '';
-    background-color: var(--my-diagnal);
+    background-color: var(--my-black);
     position: absolute;
     top: 0;
     left: 0;
@@ -879,16 +898,12 @@ section {
     height: 101%;
     z-index: -1;
     clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
-}
-
-/* QUESTION: How can I make the space between book section and about section grow bigger?
-It looks smushed rn */
-
+} */
 
 /* .footer { position: relative; }
 .footer::before {
     content: '';
-    background-color: var(--my-diagnal);
+    background-color: var(--my-black);
     position: absolute;
     top: 0;
     left: 0;
@@ -899,10 +914,15 @@ It looks smushed rn */
 } */
 
 
-
-/* FOR DEV PURPOSES ONLY ----- */
+/* ---------- FOR DEV PURPOSES ONLY ---------- */
 /* body * {
-    background-color: rgba(0,0,0,.05);
-    border: 1px solid rgba(0,0,0,.1);
-    color: rgba(0,0,0,.5);
+    background-color: rgb(0 0 0 /.05);
+    border: 1px solid rgb(0 0 0 /.1);
+    color: rgb(0 0 0 /.5);
+} */
+
+/* body * {
+    background-color: rgb( 0 255 0 /.05);
+    border: 1px solid rgb(0 255 0 /.1);
+    color: rgb(0 255 0 /.5);
 } */
