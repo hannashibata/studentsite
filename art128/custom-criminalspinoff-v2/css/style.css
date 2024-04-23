@@ -42,12 +42,12 @@ html {
     75%     => 12px
     81.3%   => 13px
     87.5%   => 14px
-    100%    => 16px
+    100%    => 16px = 1em
     112.5%  => 18px
     125%    => 20px
 
-    /* HEADINGS (Traditional Typographic Scale)
-       48, 36, 24, 21, 18, 16
+/* HEADINGS (Traditional Typographic Scale)
+    48, 36, 24, 21, 18, 16
 ----------------------- */
 body {
     font-size: 87.5%;   /* 14px */
@@ -136,7 +136,6 @@ blockquote:before {
     font-family: "veneer-three", sans-serif;
     font-size: 4em; /* 64px (1em = 16px) */
     line-height: 0.6;
-    /* background-color: pink; */
     position: absolute; 
     top: 0;
     left: -0.45em;
@@ -150,8 +149,7 @@ blockquote p {
 
 blockquote cite {
     font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    /* QUESTION: The font won't get bold and it's still italiacized */
+    font-weight: bold;     /* QUESTION: The font won't get bold and it's still italiacized */
     display: block;
     margin: 0.25em;
     font-weight: 800; 
@@ -188,8 +186,8 @@ img {
 
 /* --------------------------- COMPONENTS --------------------------- */
 /* BUTTONS */
+ /* QUESTION: How can I adjust the size of buttons in hero, and text in other buttons? */
 .button {
-    /* max-width: 240px; */
     font-family: 'Oswald', sans-serif;
     font-size: inherit;
     line-height: 1;
@@ -227,6 +225,7 @@ img {
     font-size: 75%;    /* 12px */
     line-height: 1.2;
     padding: 0.3em;
+    text-align: left;
 }
 
 .button-price {
@@ -285,11 +284,11 @@ form input[type=submit]:hover {
 }
 
 .button-group {
-    background-color: skyblue;
     display: flex;
     flex-direction: column;
     align-items: stretch; 
-    max-width: 240px; /* temp */
+    max-width: 169px; /* from UI design @ Figma */
+    background-color: skyblue;
 }
 
 .button-group.align-right{
@@ -571,6 +570,17 @@ section {
 }
 
 /* ANIMATION AND FEATURED CHARACTERS */
+.feature {
+    font-size: 1rem;
+    max-width: 240px;
+}
+
+.feature.blurb-up {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+
 @media (min-width: 768px) {
 
     .animation {
@@ -591,6 +601,8 @@ section {
 
     .feature {
         margin-bottom: 3em;
+        margin-left: auto;
+        margin-right: auto;
     }
 
 }
@@ -606,7 +618,6 @@ section {
     }
 
     .feature {
-        max-width: 240px;
         position: absolute;
     }
 
@@ -614,35 +625,28 @@ section {
         top: 0px;
         right: 0;
     }
-
-    .feature.blurb-up {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-
+    
     .feature-kevin {
         bottom: 0;
         left: 45%;
         transform: translate(-70%, -20%);
     }
-
+    
     .feature-helen {
         bottom: 0;
         left: 50%;
         transform: translate(-100%, -20%);
     }
-
+    
     .feature-benjamin {
         bottom: 0;
         left: 50%;
         transform: translate(-80%, 0%);
     }
-
+    
 }
 
 /* OFFSET LINES IN SECTION #BOOKS & #ABOUT ---------- */
-/* QUESTION: blurbs needs more adjustments */
-
 /* CSS BLURBS (blurb-css & blurb-alt-css) */
 .blurb,
 .blurb-alt {
@@ -661,14 +665,14 @@ section {
     background-image: url(../img/blurb-up.svg);
     aspect-ratio: 1/1;
     background-repeat: no-repeat;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .blurb-down-svg {
     background-image: url(../img/blurb-down.svg);
     aspect-ratio: 1/1;
     background-repeat: no-repeat;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .p-blurb {
@@ -678,14 +682,17 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     margin: 0;
     padding: 2.5em;
+} 
+
+.blurb-up .p-blurb {
+    padding-bottom: 7.5em;
 }
 
 .blurb-down .p-blurb {
-    padding-top: 5em;
-    /* QUESTION: This is not communitating?!?! */
+    padding-top: 7.5em;
 }
 
 .blurb::after,
