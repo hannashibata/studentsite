@@ -685,6 +685,7 @@ section {
 
 .blurb-down .p-blurb {
     padding-top: 5em;
+    /* QUESTION: This is not communitating?!?! */
 }
 
 .blurb::after,
@@ -752,7 +753,6 @@ section {
 }
 
 /* TESTIMONIALS & ABOUT WHITE BOXES LAYOUT */
-/* QUESTION: How can I change it to absolute position instead of negative margins? */
 @media ( min-width: 768px)  {
     .white-box.testimonials {
         margin-top: -50px;
@@ -764,7 +764,7 @@ section {
 }
 
 .book {
-    /* QUESTION: content doesn't align center */
+    /* QUESTION: content doesn't align center, especially the third book */
     display: block;
     justify-content: center;
     align-items: center;
