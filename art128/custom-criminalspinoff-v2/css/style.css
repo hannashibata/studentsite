@@ -556,7 +556,7 @@ section {
     /* NAVICON */
     .toggle-nav .site-nav .menu-button.navicon {
         border: none;
-        color: var(--my-black);
+        color: transparent;
         padding: 0;
     }
     .toggle-nav .site-nav .menu-button.navicon::after {
