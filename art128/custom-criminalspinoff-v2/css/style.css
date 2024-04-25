@@ -239,6 +239,7 @@ img {
 /* FORM STYLING */
 form input[type=submit] {
     border: 2px solid var(--my-black);
+    padding: 0.5em;
     background-color: var(--my-black);
     color: white;
     text-decoration: none;
@@ -257,8 +258,8 @@ form input[type=submit]:hover {
 
 #contact_email {
     min-width: 35ch;
-    padding-top: 0.4em;
-    padding-bottom: 0.4em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
     padding-left: 0.2em;
 }
 
@@ -290,6 +291,10 @@ form input[type=submit]:hover {
 
 .button-group.align-right{
     margin-left: auto;
+}
+
+.button-hero {
+/* QUESTION: how can I text size dictate the size of button?? */
 }
 
 /* --------------------------- LAYOUT --------------------------- */
@@ -375,6 +380,7 @@ img {
 .site-header {
     padding: 1em 0;
     position: absolute;
+    z-index: 100;
 }
 
 /* PLACE SITE-ID LEFT AND NAV RIGHT ON LARGER SCREENS */
@@ -391,12 +397,12 @@ img {
     font-family: 'Oswald', sans-serif;
 }
 
-.site-footer {
+#site-footer {
     background-color: var(--my-black);
 }
 
 .site-header a:hover,
-.site-footer a:hover {
+#site-footer a:hover {
     color: rgb(0 0 0 /.2);
     text-decoration: none;
 }
@@ -432,26 +438,26 @@ img {
     display: none;
 }
 
-.site-footer .footer-nav ul {
+#site-footer .footer-nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-.site-footer .footer-nav li {
+#site-footer .footer-nav li {
     margin: 0;
     padding: 4em 1em;
     text-align: center;
 }
 
 @media (min-width: 767px) {
-    .site-footer .footer-nav ul {
+    #site-footer .footer-nav ul {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 3fr;
         align-items: center;
     }
 
-    .site-footer .footer-nav li:last-child {
+    #site-footer .footer-nav li:last-child {
         text-align: right;
     }
 }
@@ -475,6 +481,20 @@ section {
     padding: 60px 0 0 0;
 }
 
+/* Small screens align left, big screens restore align right  */
+@media (max-width: 767px) {
+    .hero-copy {
+        max-width: 450px; 
+        margin-right: auto;
+        margin-left: auto;
+        text-align: left;
+    }
+
+    .hero-copy .button-group.align-right{
+        margin-left: 0;
+    }
+}
+
 @media ( min-width: 768px ) {
     .hero-shot {
         margin-top: -60px;
@@ -493,6 +513,7 @@ section {
 /* BOOKS */
 .column.one-half {
     display: block;
+    margin-bottom: 0;
 }
 
 /* TOGGLE NAV */
@@ -520,7 +541,7 @@ section {
         transition: all .4s ease-out;  /* .4s is the slowest */
     }
     .toggle-nav .site-nav a:hover {
-        background: rgb(255 0 200 /.8);
+        background: var(--my-red);
         color: white;
     }
     .toggle-nav[data-navstate="closed"] ul {
@@ -535,7 +556,7 @@ section {
     /* NAVICON */
     .toggle-nav .site-nav .menu-button.navicon {
         border: none;
-        color: rgb(255 255 255 /0);
+        color: var(--my-black);
         padding: 0;
     }
     .toggle-nav .site-nav .menu-button.navicon::after {
@@ -566,7 +587,12 @@ section {
 /* SECTION #BOOKS */
 .description {
     color: white;
-    padding-top: 2em;
+    /* padding-top: 2em; */    /* this was for the animation space */
+}
+@media (max-width: 767px) {
+    .description {
+        max-width: 450px;
+    }
 }
 
 /* ANIMATION AND FEATURED CHARACTERS */
@@ -580,6 +606,21 @@ section {
     flex-direction: column-reverse;
 }
 
+.headshot-john {
+    transform: translate(-40%, 0%);
+}
+
+.headshot-kevin {
+    transform: translate(40%, 0%);
+}
+
+.headshot-helen {
+    transform: translate(40%, 0%);
+}
+
+.headshot-benjamin {
+    transform: translate(-40%, 0%);
+}
 
 @media (min-width: 768px) {
 
@@ -592,7 +633,7 @@ section {
     }
 
     .anim-palace {
-        margin-left: -10em;
+        margin-left: 15em;
     }
 
 }
@@ -624,6 +665,7 @@ section {
     .feature-john {
         top: 0px;
         right: 0;
+        transform: translate(40%, -5%);
     }
     
     .feature-kevin {
@@ -635,13 +677,13 @@ section {
     .feature-helen {
         bottom: 0;
         left: 50%;
-        transform: translate(-100%, -20%);
+        transform: translate(-140%, -10%);
     }
     
     .feature-benjamin {
         bottom: 0;
         left: 50%;
-        transform: translate(-80%, 0%);
+        transform: translate(-50%, 0%);
     }
     
 }
@@ -682,9 +724,9 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 2px solid blue; */
     margin: 0;
-    padding: 2.5em;
+    padding: 2.75em;
+    /* border: 2px solid blue; */
 } 
 
 .blurb-up .p-blurb {
@@ -762,7 +804,7 @@ section {
 /* TESTIMONIALS & ABOUT WHITE BOXES LAYOUT */
 @media ( min-width: 768px)  {
     .white-box.testimonials {
-        margin-top: -50px;
+        margin-top: -40px;
     }
 
     .white-box.about {
@@ -770,18 +812,14 @@ section {
     }
 }
 
-.book {
-    /* QUESTION: content doesn't align center, especially the third book */
-    display: block;
+.one-half.book {
+    display: grid;
     justify-content: center;
-    align-items: center;
 }
 
-.column one-half {
-    /* QUESTION: content doesn't align center */
-    display: flex;
+.column.one-half {
+    display: grid;
     justify-content: center;
-    align-items: center;
 }
 
 /* BACKGROUND GRAPHIC */
@@ -811,7 +849,7 @@ section {
 }
 @media (max-width: 767px) {
     .hero::after {
-        clip-path: polygon(0 70%, 100% 80%, 100% 100%, 0% 100%);
+        clip-path: polygon(0 75%, 100% 85%, 100% 100%, 0% 100%);
     }
 }
 #books {
@@ -883,7 +921,7 @@ section {
 } */
 
 /* body * {
-    background-color: rgb( 0 255 0 /.05);
+    background-color: rgb(0 255 0 /.05);
     border: 1px solid rgb(0 255 0 /.1);
     color: rgb(0 255 0 /.5);
 } */
