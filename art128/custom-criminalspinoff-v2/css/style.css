@@ -218,7 +218,6 @@ img {
     border: 2px solid var(--my-peach);
     background-color: rgb(0 0 0 /0);
     color: var(--my-peach);
-    /* How can I match the vector image and the type? */
 }
 
 .button-text {
@@ -285,7 +284,8 @@ form input[type=submit]:hover {
 .button-group {
     display: flex;
     flex-direction: column;
-    align-items: stretch; 
+    /* align-items: stretch;  */
+    align-items: center;
     max-width: 169px; /* from UI design @ Figma */
 }
 
@@ -297,6 +297,22 @@ form input[type=submit]:hover {
 /* QUESTION: how can I text size dictate the size of button?? */
 }
 
+/* ICONS */
+.icon-listen {
+   display: block;
+   width: 35px;
+   height: 35px;
+   background-image: url(../img/icon-listen-bk.svg);
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center center;
+   margin-right: 0.5em;
+}
+
+.button:hover .icon-listen {
+     /* hover and swap */
+    background-image: url(../img/icon-listen-pnk.svg);
+}
 /* --------------------------- LAYOUT --------------------------- */
 /* SIMPLE RESET */
 * { box-sizing: border-box; }
@@ -481,7 +497,7 @@ section {
     padding: 60px 0 0 0;
 }
 
-/* Small screens align left, big screens restore align right  */
+/* Texts: Small screens align left, big screens restore align right  */
 @media (max-width: 767px) {
     .hero-copy {
         max-width: 450px; 
@@ -595,6 +611,14 @@ section {
     }
 }
 
+@media (max-width: 767px) {
+    .book01,
+    .book02,
+    .book03 {
+        padding-bottom: 10em;
+    }
+}
+
 /* ANIMATION AND FEATURED CHARACTERS */
 .feature {
     font-size: 1rem;
@@ -665,27 +689,132 @@ section {
     .feature-john {
         top: 0px;
         right: 0;
-        transform: translate(40%, -5%);
     }
-    
+
     .feature-kevin {
         bottom: 0;
         left: 45%;
-        transform: translate(-70%, -20%);
     }
     
     .feature-helen {
         bottom: 0;
         left: 50%;
-        transform: translate(-140%, -10%);
     }
     
     .feature-benjamin {
         bottom: 0;
         left: 50%;
-        transform: translate(-50%, 0%);
     }
     
+}
+
+/* SCROLL TRIGGER ANIMATION (JS) */
+[data-sectionstate="active"] .feature-john {
+    transform: translate(40%, -5%);
+    animation: animation-john 1s ease-in forwards;
+
+}
+
+[data-sectionstate="active"] .feature-kevin {
+    transform: translate(-70%, -20%);
+    animation: animation-kevin 2s ease-in forwards;
+}
+
+[data-sectionstate="active"] .feature-helen {
+    transform: translate(-140%, -10%);
+    animation: animation-helen 2s ease-in forwards;
+}
+
+[data-sectionstate="active"] .feature-benjamin {
+    transform: translate(-50%, 0%);
+    animation: animation-benjamin 2s ease-in forwards;
+}
+
+/* ANIMATION (CSS) */
+@keyframes animation-john {
+    0% {
+        transform: translateX(10em), translateY(-0.5em);
+        /* opacity: 0; */
+        }
+    50% {
+            transform: translateX(0em), translateY(0em);
+            /* opacity: 1; */
+        } 
+    
+    0% {
+        rotate: 2deg;
+        }
+        100% {
+        rotate: 0;
+        }
+}
+
+@keyframes animation-kevin {
+    0% {
+        transform: translateX(-10em), translateY(10em);
+        opacity: 0;
+        }
+    100% {
+            transform: translateX(0em), translateY(0em);
+            /* transform: translateX(0em), translateY(0em); */
+            opacity: 1;
+        } 
+    
+    0% {
+        rotate: 2deg;
+        }
+        50% {
+        rotate: -1deg;
+        }
+        100% {
+        rotate: 0;
+        }
+}
+
+@keyframes animation-helen {
+    0% {
+        transform: translateX(-10em), translateY(-10em);
+        /* transform: translateX(0em), translateY(-0.5em); */
+        opacity: 0;
+        }
+    100% {
+            transform: translateX(0em), translateY(0em);
+            /* transform: translateX(0em), translateY(0em); */
+            opacity: 1;
+        } 
+    
+    0% {
+        rotate: -2deg;
+        }
+        50% {
+        rotate: 1deg;
+        }
+        100% {
+        rotate: 0;
+        }
+}
+
+@keyframes animation-benjamin {
+    0% {
+        transform: translateX(-40em), translateY(40em);
+        /* transform: translateX(0em), translateY(-0.5em); */
+        opacity: 0;
+        }
+    100% {
+            transform: translateX(0em), translateY(0em);
+            /* transform: translateX(0em), translateY(0em); */
+            opacity: 1;
+        } 
+    
+    0% {
+        rotate: 2deg;
+        }
+        50% {
+        rotate: -1deg;
+        }
+        100% {
+        rotate: 0;
+        }
 }
 
 /* OFFSET LINES IN SECTION #BOOKS & #ABOUT ---------- */
