@@ -310,7 +310,8 @@ form input[type=submit]:hover {
 }
 
 .button:hover .icon-listen {
-     /* hover and swap */
+    /* hover and swap */
+    /* QUESTION: background image broke some code and the buttons are not consistent (T_T) */
     background-image: url(../img/icon-listen-pnk.svg);
 }
 /* --------------------------- LAYOUT --------------------------- */
