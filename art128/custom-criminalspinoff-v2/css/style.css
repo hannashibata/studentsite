@@ -734,11 +734,11 @@ section {
 /* ANIMATION (CSS) */
 @keyframes animation-john {
     0% {
-        transform: translateX(10em), translateY(-0.5em);
+        transform: translateX(10em) translateY(-0.5em);
         /* opacity: 0; */
         }
     50% {
-            transform: translateX(0em), translateY(0em);
+            transform: translateX(0em) translateY(0em);
             /* opacity: 1; */
         } 
     
