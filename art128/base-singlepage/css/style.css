@@ -349,7 +349,7 @@ section {
     text-align: center;
 }
 
-.hero h1,
+.hero h2,
 .hero p {
     max-width: 500px;
     margin-left: auto;
@@ -420,8 +420,8 @@ article {
     margin-right: auto;
 }
 
-article h1, 
-article h1 + .subhead, 
+article h2, 
+article h2 + .subhead, 
 article .date {
     text-align: center;
 } 
@@ -442,7 +442,7 @@ article .date {
     margin-bottom: 3em;
 }
 
-article p + h1,
+/* article p + h1, */
 article p + h2, 
 article p + h3,
 article p + h4,
