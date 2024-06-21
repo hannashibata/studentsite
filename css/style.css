@@ -8,6 +8,7 @@ html {
     --my-magenta: rgb(252, 15, 192, 1);
     --my-green: rgb(0 255 0 /1);
     --my-black: rgb(10 10 10 /1);
+    --my-gray: rgb(128 128 128 /1);
 }
 body { background-color: var(--my-white); }
 a { color: rgb(0 0 0 /0.8); }
@@ -234,86 +235,65 @@ footer {
     color: rgb(0 0 0 /0.8);
 }
 
-/* COURSE SECTION */
+/* COURSE SECTION, HOME */
+.courses .cards {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 3em;
+    flex-wrap: wrap;
+    padding: 3em 0;
+    font-size: .875em;
+    line-height: 1.1;
+}
+
+.courses .cards li {
+    min-width: 30%;
+}
+
+.courses .cards a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: var(--my-gray);
+    border-radius: 5px;
+    /* margin: 1em; */
+    padding: 4em 2em;
+    /* list-style: none; */
+    text-decoration: none;
+    box-shadow: 0 0 8px 0 rgba(255 255 255 /.5);
+}
+
 .container-home {
     max-width: 800px;
     margin: 0 auto;
 }
+
  .courses {
     padding: 4em 1em 7em 1em;
     display: grid; 
     align-items: center;
 }
 
-.thumbgrid {
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.thumbgrid li {
-    list-style: none;
-    /* width: 49.5%; */
-    padding-bottom: 0.4%;
-}
-
-@media (min-width: 768px) {
-    .thumbgrid li {
-        width: 32.75%;
-    }
-}
-
-/* .grid-cards {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    color: var(--my-white);
-    margin: 0;
-    padding: 0;
-    list-style: none;
-} */
-
-.thumbgrid-card {
-    background-color: white;
-    border-radius: 5px;
-    overflow: hidden;
-    /* box-shadow: 0 4px 8px 0 gray; */
-    transition: 0.3s;
-    margin: 30px auto;
-    width: 150px;
-    height: 150px;
-    cursor: pointer;
-    position: relative;
-}
-
-/* .card-image {
-    display: block;
-    object-fit: cover;
-    height: 50%;
-    width: 50%;
-} */
-  
-.card_title {
-    color: var(--my-black);
-    position: absolute;
-    display: grid;
-    top: 50%; 
-    left: 50%;
-    transform: translate(-50%, -50%); 
-}
-
-/* Why is the general animation wtill applied */
-.thumbgrid-card:hover {
-    transform: scale(1.05, 1.05);
-    /* box-shadow: 0 6px 12px 0 var(--my-green); */
+/* QUESTION: Why is the general animation still applied? And how can I make it transtion? */
+.courses .cards a:hover {
+    transform: scale(1.02, 1.02);
+    transition: all .2sc ease-out;
+    box-shadow: 0 0 12px 0 var(--my-green);
 }
 
 .courses h3, .courses a {
-/* color: rgb(0 0 0 /0.8);
-line-height: 1; */
-color: var(--my-white);
-text-align: center;
+    color: var(--my-white);
+    text-align: center;
+}
+
+.cards li {
+    color: var(--my-black);
+}
+.courses .cards span {
+    display: block;
+    /* color: var(--my-black); */
+    font-size: 2em;
 }
 
 
