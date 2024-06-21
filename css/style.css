@@ -243,9 +243,28 @@ footer {
     padding: 4em 1em 7em 1em;
     display: grid; 
     align-items: center;
- }
+}
 
- .courses ul {
+.thumbgrid {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.thumbgrid li {
+    list-style: none;
+    /* width: 49.5%; */
+    padding-bottom: 0.4%;
+}
+
+@media (min-width: 768px) {
+    .thumbgrid li {
+        width: 32.75%;
+    }
+}
+
+/* .grid-cards {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -253,72 +272,73 @@ footer {
     margin: 0;
     padding: 0;
     list-style: none;
- }
+} */
 
- .card-course {
-    /* background-color: white; */
+.thumbgrid-card {
+    background-color: white;
     border-radius: 5px;
     overflow: hidden;
-    box-shadow: 0 4px 8px 0 gray;
+    /* box-shadow: 0 4px 8px 0 gray; */
     transition: 0.3s;
     margin: 30px auto;
     width: 150px;
     height: 150px;
     cursor: pointer;
     position: relative;
- }
+}
 
- .card-image {
+/* .card-image {
     display: block;
-    object-fit: contain;
+    object-fit: cover;
     height: 50%;
     width: 50%;
-  }
+} */
   
-  .card_title {
+.card_title {
+    color: var(--my-black);
     position: absolute;
     display: grid;
     top: 50%; 
     left: 50%;
     transform: translate(-50%, -50%); 
-  }
+}
 
-.card-course:hover {
+.thumbgrid-card:hover {
     transform: scale(1.05, 1.05);
-    box-shadow: 0 6px 12px 0 var(--my-green);
-  }
+    /* box-shadow: 0 6px 12px 0 var(--my-green); */
+}
 
- .courses h3, .courses a {
-    /* color: rgb(0 0 0 /0.8);
-    line-height: 1; */
-    color: var(--my-white);
-    text-align: center;
- }
+.courses h3, .courses a {
+/* color: rgb(0 0 0 /0.8);
+line-height: 1; */
+color: var(--my-white);
+text-align: center;
+}
 
 
 /* COURSE PAGES WITH MULTIPLE PROJECT LISTS */
- .coursework{
-    padding: 3em 1em;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
- }
+.coursework{
+padding: 3em 1em;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+}
 
- .project {
-    margin: 2em;
- }
+.project {
+margin: 2em;
+}
 
- /* LAYOUT */
- .container {
-    max-width: 1000px;
-    margin: 0 auto;
- }
+/* LAYOUT */
+.container {
+max-width: 1000px;
+margin: 0 auto;
+}
 
- section {
-    padding: 3em 1em;
- }
+section {
+padding: 3em 1em;
+}
 
- /* SIDEBAR/ASIDE */
+/* SIDEBAR/ASIDE */
 .aside {
     padding: 2em 0;
 }
