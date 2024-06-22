@@ -4,11 +4,12 @@ body { margin: 0; }
 
 /* GLOBAL COLORS */
 html {
-    --my-white: rgb(250 250 250 /1);
+    --my-white: rgb(245 245 245 /1);
     --my-magenta: rgb(252, 15, 192, 1);
     --my-green: rgb(0 255 0 /1);
     --my-black: rgb(10 10 10 /1);
     --my-gray: rgb(128 128 128 /1);
+    --my-gray10: rgb(128 128 128 /.1);
 }
 body { background-color: var(--my-white); }
 a { color: rgb(0 0 0 /0.8); }
@@ -165,7 +166,11 @@ footer {
     padding: 1em;
 }
 
-/* HERO SECTION */
+.social-nav li:hover {
+    transform: scale(1.2, 1.2);
+}
+
+/* HERO SECTION & ANIMATION */
 .hero {
     text-align: center;
     color: rgb(0 0 0 /0.8);
@@ -176,12 +181,16 @@ footer {
     font-size: 6em;
     color: var(--my-white);  
     text-shadow: 0em 0em 0.2em rgb(0 0 0 /.8);
-    animation-name: animation-h2;
-    animation-duration: 2s;
-    /* animation-iteration-count: 2; */
     line-height: 1;
     text-transform: uppercase;
     margin: 0 auto;
+}
+
+.hero h2,
+.courses h3 {
+    animation-name: animation-h2;
+    animation-duration: 2s;
+    /* animation-iteration-count: 2; */
 }
 
 @keyframes animation-h2 {
@@ -198,6 +207,10 @@ footer {
 .hero p {
     color: var(--my-white);
     margin: 1em auto;
+}
+
+.hero p,
+.cards {
     animation-name: animation-p;
     animation-duration: 2s;
 }
@@ -255,7 +268,7 @@ footer {
     display: block;
     width: 100%;
     height: 100%;
-    background: var(--my-gray);
+    background: var(--my-gray10);
     border-radius: 5px;
     /* margin: 1em; */
     padding: 4em 2em;
@@ -275,10 +288,13 @@ footer {
     align-items: center;
 }
 
-/* QUESTION: Why is the general animation still applied? And how can I make it transtion? */
+/* QUESTION: Why is the general animation still applied?
+And how can I make it transtion? */
 .courses .cards a:hover {
-    transform: scale(1.02, 1.02);
+    transform: scale(1.05, 1.05);
     transition: all .2sc ease-out;
+    background-color: var(--my-white);
+    color: var(--my-gray);
     box-shadow: 0 0 12px 0 var(--my-green);
 }
 
