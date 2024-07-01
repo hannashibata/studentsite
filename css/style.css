@@ -197,10 +197,6 @@ footer {
     10%   { opacity: 0;}
     100% { opacity: 1;}
     0%   { transform: translateY(-0.5em); }
-
-    /* 0%      { color: var(--my-white); }
-    75%     { color: var(--my-magenta); }
-    100%    { color: var(--my-green); } */
 }
 
 .hero p {
@@ -219,10 +215,6 @@ footer {
     10%   { opacity: 0;}
     100% { opacity: 1;}
     0%   { transform: translateY(0.5em); }
-
-    /* 0%      { color: var(--my-white); }
-    75%     { color: var(--my-magenta); }
-    100%    { color: var(--my-green); } */
 }
 
 /* CUSTOM STYILING FOR SPECIFIC & SUB SECTION */
