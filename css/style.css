@@ -193,10 +193,10 @@ footer {
 }
 
 @keyframes animation-h2 {
-    0%    { opacity: 0;}
+    0%    { opacity: 0;
+            transform: translateY(-0.5em);}
     10%   { opacity: 0;}
     100% { opacity: 1;}
-    0%   { transform: translateY(-0.5em); }
 }
 
 .hero p {
@@ -211,10 +211,10 @@ footer {
 }
 
 @keyframes animation-p {
-    0%    { opacity: 0;}
+    0%    { opacity: 0;
+            transform: translateY(0.5em);}
     10%   { opacity: 0;}
     100% { opacity: 1;}
-    0%   { transform: translateY(0.5em); }
 }
 
 /* CUSTOM STYILING FOR SPECIFIC & SUB SECTION */
