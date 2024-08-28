@@ -239,6 +239,10 @@ footer {
     color: rgb(0 0 0 /0.8);
 }
 
+.explanation {
+    color: var(--my-gray);
+}
+
 /* COURSE SECTION, HOME */
 .courses .cards {
     display: flex;
