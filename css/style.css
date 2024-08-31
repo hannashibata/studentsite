@@ -78,30 +78,39 @@ a:hover::before {
 
 /* COMPONENTS ---------- */
 /* BUTTONS */
-/* .button {
-    font-size: inherit;
-    line-height: 1;
+.a-button {
+    font-size: 75%;
     display: inline-block;
     text-align: center;
-    text-transform: uppercase;
-    border: 2px solid var(--my-pink);
-    background-color: var(--my-pink);
-    color: var(--my-pink);
-    padding: 1em;
-    margin: .5em .5em .5em 0;
-    border-radius: 0.1em;
+    background-color: var(--my-gray);
+    color: var(--my-white);
+    border: var(--my-white) 1px solid;
+    border-radius: 3px;
+    padding: 0.15em 1em 0 1em;
+    margin: 0 1em;
 }
 
-.button:hover {
+.a-button:hover {
+    transform: scale(1.2, 1.2);
+    background-color: var(--my-green);
+    color: var(--my-black);
+    text-decoration: none;
+}
+
+/* .button:hover {
     border: 2px solid var(--my-pink);
     background-color: rgb(0 0 0 /0);
     color: var(--my-pink);
     text-decoration: none;
-} */
+}  */
 
 /* GENERAL LISTS */
 ul, ol {
     padding-left: 1.5em;
+}
+
+dd {
+    padding-left: 1em;
 }
 
 /* SITE HEADER */
