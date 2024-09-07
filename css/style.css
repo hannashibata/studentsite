@@ -23,7 +23,7 @@ body {
 
 /* GLOBAL TYPOGRAPHY */
 body {
-	font-family: 'Courier New', Courier, monospace;
+	font-family: 'DM Mono', Courier, monospace;
 	font-size: 88.75%;  /* 14pt */
 	line-height: 1.4; 
 	color: rgb(0 0 0 /0.8);
