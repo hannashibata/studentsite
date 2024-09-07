@@ -4,7 +4,7 @@ body { margin: 0; }
 
 /* GLOBAL COLORS */
 html {
-    --my-white: rgb(245 245 245 /1);
+    --my-white: rgb(225 225 225 /1);
     --my-magenta: rgb(252, 15, 192, 1);
     --my-green: rgb(0 255 0 /1);
     --my-black: rgb(10 10 10 /1);
