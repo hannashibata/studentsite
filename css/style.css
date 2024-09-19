@@ -386,6 +386,13 @@ dd {
     margin: 0;
 }
 
+/* FOR IN-PROGRESS PROJECTS ONLY */
+.inactive,
+.inactive ul,
+.inactive li,
+.inactive a {
+    color: var(--my-gray);
+}
 
 /* FOR WEB DEV PURPOSES ONLY */
 /* this is to see blocks */
