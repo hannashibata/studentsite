@@ -86,7 +86,7 @@ a:hover::before {
     border: var(--my-white) 1px solid;
     border-radius: 3px;
     padding: 0.15em 1em 0 1em;
-    margin: 0 1em;
+    margin: 0 .25em;
 }
 
 .a-button:hover {
