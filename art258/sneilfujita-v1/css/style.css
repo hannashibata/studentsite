@@ -699,7 +699,7 @@ section {
 }
 
 .page-sub .hero {
-    border: 10px solid yellow;
+    /* border: 10px solid yellow; */
     padding-left: calc(3em + var(--unit-small));
 }
 
@@ -1389,9 +1389,9 @@ time {
     color: rgb(0 0 0 /0.5);
 } */
 
-body * {
+/* body * {
     border: 1px solid red;
-}
+} */
 
 /* .home-hero-grid-item {
     border: 2px solid blue;
