@@ -13,16 +13,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="typeface/stylesheet.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="page-home">
 
-    <header class="site-header on-top-of-hero">
+    <header class="site-header on-top-of-herox hide-visually">
         <div class="site-logo">
             <a href="index.html">
                  <img src="img/placeholder-logo-500x500.svg" alt="logo" width="50" height="50">
             </a>
-            <h1 class="hide-visuallyx"><a href="index.html">S.Neil Fujita</a></h1>
+            <h1><a href="index.html">S.Neil Fujita</a></h1>
         </div>
 
         <nav class="site-header-nav toggle-menu" data-menustate="closed">
@@ -35,9 +37,9 @@
                 </svg>
             </button>
             <ul class="site-menu">
-                <li><a href="index.html#about">About Fujita</a></li>
+                <li><a href="index.html#about">About S. Neil Fujita</a></li>
                 <li><a href="page-works/index.html">Selected Works</a></li>
-                <li><a href="page-timeline/index.html">Timeline</a></li>
+                <li><a href="page-timeline/index.html">Fujita&rsquo;s Timeline</a></li>
             </ul>
         </nav>
     </header>
@@ -60,9 +62,10 @@
 
                 <!-- List menu 
                  !!! Refactoring required -->
-                <div class="home-hero-grid-item red-bg mid01 observe-me animate-from-left"><a href="#">About Fujita</a></div>
-                <div class="home-hero-grid-item red-bg mid03 observe-me animate-from-right "><a href="#">Fujita&rsquo;s Selected Works</a></div>
-                <div class="home-hero-grid-item red-bg btm02 observe-me animate-from-bottom"><a href="#">Fujita&rsquo;s Timeline</a></div>
+                <a class="home-hero-grid-item red-bg mid01 observe-me animate-from-left" href="index.html#about">About S. Niel Fujita</a>
+                <!-- <div class="home-hero-grid-item red-bg mid01 observe-me animate-from-left"><a href="index.html#about">About S. Niel Fujita</a></div> -->
+                <a class="home-hero-grid-item red-bg mid03 observe-me animate-from-right" href="page-works/index.html">Selected Works</a>
+                <a class="home-hero-grid-item red-bg btm02 observe-me animate-from-bottom" href="page-timeline/index.html">Fujita&rsquo;s Timeline</a>
 
                 <!-- Citation -->
                 <div class="home-hero-grid-item red-bgxx btm03 credit observe-me animate-from-bottomright01">
@@ -86,19 +89,16 @@
                 
                 <div class="row">
                     <!-- Left column -->
-                    <div class="one-third observe-me animate-from-upperleft">
+                    <div class="one-third observe-me animate-from-left">
                         <h2>About</h2>
                         <blockquote cite="https://www.hellerbooks.com/pdfs/voice_s_neil_fujita.pdf">
-                        <p>“There wasn&rsquo;t 
-                            anything about 
-                            actual designing that 
-                            I hated.”</p>
+                        <p>&ldquo;I wanted to look for a job in graphic art because I knew that I had to make a living and that painting wasn&rsquo;t going to do it. [...] I went down to Philadelphia, and Coiner (Charles Coiner, N. W. Ayer & Son) looked at my portfolio and offered me a job, but it wasn&rsquo;t because of my commercial work—it was because of my paintings!&rdquo;</p>
                         <p>— S. Neil Fujtia,<cite>Waxing Chromatic: An Interview with S. Neil Fujita By Steven Heller</cite></p>
                         </blockquote>
                     </div>
 
                     <!-- Right column -->
-                    <div class="two-thirds">
+                    <div class="two-thirds observe-me animate-from-right">
                         <div><img src="img/placeholder-2000x1500.jpg" alt="Placeholder image." width="2000" height="1500"></div>
                         <h5>Born on the island of Kauai, Hawaii, in 1921 as a Japanese-American Nisei, S.Neil Fujita&rsquo;s journey to devoting himself to art and design started when he started his studies in art and design at Chouinard Art Institute in Los Angeles. That journey was not so easy, though. Like many other Japanese-Americans, his life was disrupted by World War 2 and the issue of Executive Order 9066. While these events do not look to overshadow his prolific portfolio, his works reflect Fujita&rsquo;s resilience and fearlessness.</h5>
                     </div>
@@ -134,20 +134,21 @@
                 </div>
 
                 <div class="row">
-                    <div class="push-4 two-thirds">
+                    <div class="push-4 two-thirds observe-me animate-from-right">
                         <h3>Incarceration in Wyoming, and the 442nd Regimental Combat Team</h3>
                         <div><img src="img/placeholder-2000x1500.jpg" alt="Placeholder image." width="2000" height="1500"></div>
                         <h5>Born on the island of Kauai, Hawaii, in 1921 as a Japanese-American Nisei, S.Neil Fujita&rsquo;s journey to devoting himself to art and design started when he started his studies in art and design at Chouinard Art Institute in Los Angeles. That journey was not so easy, though. Like many other Japanese-Americans, his life was disrupted by World War 2 and the issue of Executive Order 9066. While these events do not look to overshadow his prolific portfolio, his works reflect Fujita&rsquo;s resilience and fearlessness.</h5>
                     </div>
 
-                    <div class="one-third">
+
+                    <div class="one-third observe-me animate-from-left">
                         <img src="img/placeholder-2000x1500.jpg" alt="Placeholder image." width="2000" height="1500">
                     </div>
-                    <div class="one-third">
+                    <div class="one-third observe-me animate-from-right">
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi ullam minima veniam, at ex sequi accusantium doloribus id sit, atque nulla quibusdam iste laudantium ea modi! Non a cum exercitationem!</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ullam eaque alias hic possimus ipsam porro, quam temporibus harum asperiores cum enim cumque veritatis quaerat qui quisquam itaque, excepturi eius ex molestiae provident. Deleniti at autem dicta, atque officia fugit.</p>
                     </div>
-                    <div class="one-third">
+                    <div class="one-third observe-me animate-from-right">
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi ullam minima veniam, at ex sequi accusantium doloribus id sit, atque nulla quibusdam iste laudantium ea modi! Non a cum exercitationem!</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis expedita quae saepe neque! In enim tempora ex labore, adipisci dignissimos commodi tenetur veritatis nihil maiores libero quisquam voluptatum dolorum optio obcaecati nulla modi vero quia. Delectus nulla quisquam illo veritatis, omnis nisi error porro fugiat hic? Quam officia repellat molestias.</p>
                     </div>
@@ -155,15 +156,15 @@
 
                 <div class="row">
 
-                    <div class="push-4 two-thirds">
+                    <div class="push-4 two-thirds observe-me animate-from-right">
                         <h3>Coming Back from Frontline to Graphic Art</h3>
                     </div>
 
-                    <div class="two-thirds">
+                    <div class="two-thirds observe-me animate-from-left">
                         <img src="img/placeholder-2000x1500.jpg" alt="Placeholder image." width="2000" height="1500">
                     </div>
 
-                    <div class="one-third">
+                    <div class="one-third observe-me animate-from-right">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur eveniet perspiciatis qui illo labore, laboriosam et veniam rem assumenda dolore maiores itaque, ab possimus vero modi. Laboriosam, cum quis exercitationem ipsum recusandae nostrum distinctio itaque ullam porro vitae dolorem consequuntur praesentium veritatis harum minima unde quidem reprehenderit dolorum sint laudantium.</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium dolorum autem maiores fugit quaerat sunt nemo veniam iusto. Iste, tenetur veritatis dolorem omnis ipsam fugit. Eligendi, vitae ipsam, nemo labore accusantium veritatis molestiae molestias, maiores harum temporibus cumque accusamus quae amet corrupti vero ea ipsum.</p>
                     </div>
@@ -172,12 +173,12 @@
 
                 <div class="row">
 
-                    <div class="push-4 one-third">
+                    <div class="push-4 one-third observe-me animate-from-left">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, nisi! Ea aliquam pariatur, earum laudantium veritatis harum esse eveniet unde, quasi enim nesciunt, nisi reprehenderit magni illum repellendus adipisci dolore optio eos? Ullam maiores numquam nesciunt reprehenderit labore deleniti laboriosam magnam odio, at corrupti vero!</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, autem similique. Quod minima, deleniti ex harum iure ullam facilis facere et blanditiis, inventore repellat ad perspiciatis, a laborum. Delectus itaque tenetur voluptates? Sit ad totam quae maiores aperiam vitae, est amet corporis exercitationem possimus aut animi obcaecati, illo libero. Illo at autem, nulla distinctio mollitia qui architecto animi numquam explicabo!</p>
                     </div>
 
-                    <div class="push-8 one-third">
+                    <div class="push-8 one-third observe-me animate-from-right">
                         <img src="img/placeholder-2000x1500.jpg" alt="Placeholder image." width="2000" height="1500">
                         <img src="img/placeholder-2000x1500.jpg" alt="Placeholder image." width="2000" height="1500">
                     </div>
@@ -186,15 +187,15 @@
 
                 <div class="row">
 
-                    <div class="one-third red-bg">
+                    <div class="one-third red-bg observe-me animate-from-top">
                         <p>Check this piece</p>
                     </div>
 
-                    <div class="one-third">
+                    <div class="one-third observe-me animate-from-right">
                         <img src="img/placeholder-2000x1500.jpg" alt="Placeholder image." width="2000" height="1500">
                     </div>
 
-                    <div class="one-third">
+                    <div class="one-third observe-me animate-from-right">
                         <img src="img/placeholder-2000x1500.jpg" alt="Placeholder image." width="2000" height="1500">
                     </div>
                     
@@ -219,19 +220,18 @@
 
                 <div class="one-half">
                     <h2>A Life of Chromatic Shade:<br>S.Neil Fujita&rsquo;s<br>Visionary Fusion</h2>
-                    <h5>This website is a student project aiming to celebrate and honor Fujita&rsquo;s prominent achievements and his dedication to the American graphic design. </h5>
                 </div>
                 <div class="one-half">
-                    <na class="site-footer-nav">
+                    <nav class="site-footer-nav">
                         <ul>
                             <li><a href="index.html">Home/Top</a></li>
-                            <li><a href="index.html#about">About Fujita</a></li>
-                            <li><a href="page-works/index.html">Fujita&rsquo;s Selected Works</a></li>
+                            <li><a href="index.html#about">About S. Neil Fujita</a></li>
+                            <li><a href="page-works/index.html">Selected Works</a></li>
                             <li><a href="page-timeline/index.html">Fujita&rsquo;s Timeline</a></li>
                         </ul>
                     </nav>
+                    <h5>This website is a student project aiming to celebrate and honor Fujita&rsquo;s prominent achievements and his dedication to the American graphic design. </h5>
                 </div>
-
             </div>
 
             <!-- Bibliography -->
@@ -246,12 +246,12 @@
                 </div>
             </div>
 
-
         </div>
     </footer>
 
     <!-- MAIN JS FILE -->
     <script src="js/script.js"></script>
+    <script src="js/parallax.js"></script>
 
    
 </body>

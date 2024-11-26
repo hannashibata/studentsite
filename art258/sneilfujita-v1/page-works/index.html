@@ -13,15 +13,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="typeface/stylesheet.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 
-<body class="page-works">
+<body class="page-works page-sub">
 
     <header class="site-header rotated-header">
         <div class="site-logo">
-            <!-- <a href="index.html">
-                 <img src="img/placeholder-logo-500x500.svg" alt="logo" width="50" height="50">
-            </a> -->
             <h1 class="hide-visuallyx"><a href="../index.html">S.Neil Fujita</a></h1>
         </div>
 
@@ -35,9 +34,8 @@
                 </svg>
             </button>
             <ul class="site-menu">
-                <li><a href="../index.html">Home/Top</a></li>
-                <li><a href="../index.html#about">About Fujita</a></li>
-                <li><a href="index.html">Fujita&rsquo;s Selected Works</a></li>
+                <li><a href="../index.html#about">About S. Neil Fujita</a></li>
+                <li><a href="index.html">Selected Works</a></li>
                 <li><a href="../page-timeline/index.html">Fujita&rsquo;s Timeline</a></li>
             </ul>
         </nav>
@@ -51,9 +49,11 @@
             <div class="sub-home-hero">
 
                 <!-- Tytle of the website -->
+
+                <!-- QUESTION: why is it blinking??? -->
                 <div class="text-wrapper observe-me animate-from-top">
-                    <h2>Selected Works</h2>
-                    <blockquote cite="https://www.theguardian.com/artanddesign/2010/nov/05/neil-fujita-obituary"><p>“(Fujita) distinguished himself by having a rigorous design objective. It was a kind of synthesis of Bauhaus principles and Japanese sensibility.”</p>
+                    <h2 class="parallax-onscroll" data-parallax-speed="-.5">Selected Works</h2>
+                    <blockquote class="parallax-onscroll" data-parallax-speed="-.5" cite="https://www.theguardian.com/artanddesign/2010/nov/05/neil-fujita-obituary"><p>“(Fujita) distinguished himself by having a rigorous design objective. It was a kind of synthesis of Bauhaus principles and Japanese sensibility.”</p>
                     <p>— Milton Glaser</p></blockquote>
                 </div>
 
@@ -146,17 +146,17 @@
 
                 <div class="one-half">
                     <h2>A Life of Chromatic Shade:<br>S.Neil Fujita&rsquo;s<br>Visionary Fusion</h2>
-                    <h5>This website is a student project aiming to celebrate and honor Fujita&rsquo;s prominent achievements and his dedication to the American graphic design. </h5>
                 </div>
                 <div class="one-half">
-                    <na class="site-footer-nav">
+                    <nav class="site-footer-nav">
                         <ul>
-                            <li><a href="index.html">Home/Top</a></li>
-                            <li><a href="index.html#about">About Fujita</a></li>
-                            <li><a href="page-works/index.html">Fujita&rsquo;s Selected Works</a></li>
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="index.html#about">About S. Neil Fujita</a></li>
+                            <li><a href="page-works/index.html">Selected Works</a></li>
                             <li><a href="page-timeline/index.html">Fujita&rsquo;s Timeline</a></li>
                         </ul>
                     </nav>
+                    <h5>This website is a student project aiming to celebrate and honor Fujita&rsquo;s prominent achievements and his dedication to the American graphic design. </h5>
                 </div>
 
             </div>
@@ -173,12 +173,12 @@
                 </div>
             </div>
 
-
         </div>
     </footer>
 
     <!-- MAIN JS FILE -->
     <script src="../js/script.js"></script>
+    <script src="../js/parallax.js"></script>
 
    
 </body>

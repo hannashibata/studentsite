@@ -28,7 +28,7 @@ toggleMenuLinks.forEach((el) => {
   }
 });
 
-// ON SCROLL ANIMATION
+// ON SCROLL ANIMATION, INTERSECTION OBSERVER
 // Change active state for all elements with class="observe-me"
 const myobserver = new IntersectionObserver((entries) => {
 
@@ -43,10 +43,8 @@ const myobserver = new IntersectionObserver((entries) => {
     };
     
   });
-  
-  
-});
 
+});
 
 const mytargets = document.querySelectorAll('.observe-me');
 mytargets.forEach((el) => {
