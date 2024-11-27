@@ -31,19 +31,23 @@ body {
 }
 
 /* HEADGINGS */
+h1, h2, h3, h4, dt {
+    margin: .5em 0;
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 h1, h2 {
     font-family: 'pp_editorial_oldregular', Georgia, sans-serif;
-    margin: .5em 0;
 }
 
 h3 {
     font-family: 'pp_editorial_olditalic', Georgia, sans-serif;
-    margin: .5em 0;
 }
 
 h4, dt {
     font-family: 'pp_editorial_ultrabold', Georgia, sans-serif;
-    margin: .5em 0;
 }
 
 /* PARAGRAPHS */
