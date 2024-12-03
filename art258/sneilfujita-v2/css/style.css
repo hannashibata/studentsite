@@ -1,0 +1,1254 @@
+/* 
+CSS TABLE OF CONTENTS
+
+# BASIC CSS FROM PARTIALS
+
+# GLOBAL STYLES
+    # GLOBAL VARIABLES
+    # GLOBAL RESET
+    # GLOBAL COLORS
+    # GLOBAL TYPOGRAPHY
+    # GLOBAL MEDIA
+    # GLOBAL HELPERS
+
+# LAYOUT & GRID SYSTEM (SEE @import)
+    # MEDIA QUERIES / BREAKPOINTS (RESPONSIVE TYPOGRAPHY)
+    # CONTAINER
+    # GRID
+
+# SITE STRUCTURE
+    # HEADER
+        # LOGO
+        # SITE NAV
+            # TOGGLE MENU
+                # NAVICON / HAMBURGER
+        # SITE-HEADER-ON-TOP-OF-HERO
+    # MAIN
+        # SECTIONS
+            # HERO
+    # FOOTER
+
+# UI COMPONENTS
+    # BUTTONS
+
+# ANIMATION
+    # SMOOTH SCROLLING
+
+# CUSTOM STYLING
+
+ */
+
+/* ----------------------------------------------- */
+/* BASIC CSS FROM PARTIALS */
+/* ----------------------------------------------- */
+
+@import url(partials/grid.css);
+
+
+/* ----------------------------------------------- */
+/* GLOBAL STYLES  */
+/* ----------------------------------------------- */
+
+/* GLOBAL VARIABLES
+ * Definitions for commonly used colors, typeface, sizing-units.
+/* -----------------------------------------------  */
+
+:root {
+    /* COLORS */
+    --color-primary: #E63A0C;
+    --color-secondary: #AB4D83;
+    --color-tertiary: #FD9F00;
+    --color-black: #2F3A36;
+    --color-white: #E9E7DA;
+
+    --color-body-bg: var(--color-white);
+    --color-text-body-black: var(--color-black);
+    --color-text-body-white: var(--color-white);
+    --color-text-headings-black: var(--color-black);
+    --color-text-headings-white: var(--color-white);
+
+    --color-a: var(--color-primary);
+    --color-a-hover: var(--color-tertiary);
+    --color-a-dark: var(--color-black);
+    --color-a-light: var(--color-white);
+
+    --color-siteheader-bg: transparent;
+    --color-siteheader-a: var(--color-text-headings);
+
+    --color-dark-bg: var(--color-black);
+    --color-color-bg: var(--color-tertiary);
+    --color-light-bg: var(--color-white);
+
+    --color-light-hero-headings: var(--color-white);
+    --color-light-hero-text: var(--color-white);
+    --color-dark-hero-headings: var(--color-black);
+    --color-dark-hero-text: var(--color-black);
+
+    --color-sitefooter-bg: var(--color-secondary);
+    --color-sitefooter-text: var(--color-black);
+    --color-sitefooter-headings: var(--color-black);
+    --color-sitefooter-a: var(--color-white);
+
+    /* TYPEFACES */
+    --font-body: 'Roboto', system-ui, Arial, sans-serif;
+    --font-sans-serif: 'Besley', Georgia, serif;
+    --font-special: 'Corleone Due';
+
+    /* SIZING UNITS */
+    --container-width: 1200px;
+    --unit-small: 1em;
+    --unit-medium: 2em;
+    --unit-large: 4em;
+
+}
+
+/* GLOBAL RESET
+ * Change box-sizing for all to border-obox.
+ * Remove the default 8px margin on the body.
+/* ----------------------------------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+/* GLOBAL COLORS
+ * Set the color of the main body backround.
+ * Set the color of the main body text, all headings H1, text links & hover states, etc.
+/* ----------------------------------------------- */
+
+body {
+    background-color: var(--color-light-bg);
+    color: var(--color-text-body-black);
+}
+
+h1,
+h2,
+h3 {
+
+    /* color: var(--color-text-headings-black); */
+    font-weight: 900;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-a-dark);
+
+    &:hover {
+        color: var(--color-a-hover);
+    }
+}
+
+/* Change typeface while hovering in site-nav */
+nav a:hover {
+    font-family: var(--font-special);
+    font-size: 1.5em;
+    font-weight: normal;
+}
+
+/* GLOBAL TYPOGRAPHY
+ * Set the font for all main body text & leading for all body text.
+ * Set the font & margin for all headings.
+ * Set size and leading for all headings.
+ * Limit the width of all paragraphs and adding new school widow slayer.
+/* ----------------------------------------------- */
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.4;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-sans-serif);
+    margin: .4em 0;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 900;
+}
+
+h1 {
+    font-size: 3em;
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: 2em;
+    line-height: 1.2;
+}
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.3;
+}
+
+h4 {
+    font-size: 1.2em;
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+h5 {
+    font-family: var(--font-body);
+    font-size: 1.1em;
+    line-height: 1.3;
+}
+
+p {
+
+    font-size: .75em;
+    line-height: 1.4;
+    max-width: 65ch;
+    text-wrap: pretty;
+}
+
+blockquote {
+    font-family: var(--font-sans-serif);
+}
+
+/* GLOBAL MEDIA
+ * Make all images shrink on small screens
+/* ----------------------------------------------- */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* GLOBAL HELPERS
+ * Hide elements visually but not from screen readers and search engines
+/* ----------------------------------------------- */
+.hide-visually {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+@media (max-width: 767px) {
+    .hide-visually-smallonly {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+}
+
+/* ----------------------------------------------- */
+/* LAUOUT & GRID  */
+/* ----------------------------------------------- */
+/* See top, @import url(partials/grid.css); */
+
+/* ----------------------------------------------- */
+/* SITE STRUCTURE  */
+/* ----------------------------------------------- */
+
+/* SITE HEADER */
+.site-header {
+    background-color: var(--color-siteheader-bg);
+
+    /* PUT ALL HEADER CHILDREN SIDE-BY-SIDE AND VERT CENTERED */
+    @media (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* ADD SOME GENERAL SPACING AROUND THE HEADER */
+    padding: var(--unit-small);
+
+    /* REMOVE LINK UNDERLINES */
+    a {
+        text-decoration: none;
+    }
+
+    /* SITE LOGO */
+    .site-logo {
+
+        /* PUT SITE LOGO CHILDREN SIDE-BY-SIDE AND CENTER */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+
+        /* REMOVE MARGINS AND RESIZE H1 INSIDE HEADER */
+        h1 {
+            font-size: 2em;
+            margin: 0;
+            text-wrap: nowrap;
+        }
+
+        /* REMOVE THE SPACE UDER THE LOGO MARK */
+        img,
+        svg {
+            display: block;
+        }
+
+    }
+
+    /* SITE-HEADER-NAV */
+    .site-header-nav {
+
+        ul {
+            /* REMOVE MARGINS & BULLETS FROM LIST */
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+        }
+
+        /* MAKE SITE NAV LINKS BIG LIKE BUTTONS */
+        a {
+            display: block;
+            padding: 10px;
+        }
+
+    }
+
+}
+
+/* TOGGLE MENU
+----------------------------------------------- */
+
+/*HIDE MENU BUTTON IF NOT USING TOGGLE MENU  */
+.site-menu-button {
+    display: none;
+}
+
+.toggle-menu {
+
+    --color-togglemenu-bg: var(--color-black);
+    --color-togglemenu-text: var(--color-white);
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+
+    /* SHOW MENU BUTTON IF USING TOGGLE NAV */
+    .site-menu-button {
+        display: block;
+        background-color: transparent;
+        border: 1px solid var(--color-siteheader-a);
+        color: var(--color-siteheader-a);
+        padding: .5em;
+        position: relative;
+        z-index: 100;
+        transition: .4s all ease-out;
+
+        /* RESET THE FONT SIZE */
+        font-size: inherit;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        /* ADD SUPPORT FOR NAVICON/HAMBURGER ICON */
+        &:has(svg) {
+
+            /* VERTICALLY ALIGN THE MENU TEXT W ICON */
+            display: flex;
+            align-content: center;
+            gap: var(--unit-small);
+
+            /* REMOVE BORDER */
+            border: none;
+
+            /* SET TSVG COLOR */
+            svg {
+                fill: var(--color-siteheader-a);
+            }
+
+            /* ADD SUPPORT FOR SVG ANIMATION (">" MEANS "IMEDIATE CHILD") */
+            svg>* {
+                transition: .2s all ease-out;
+                transform-origin: center;
+            }
+
+        }
+    }
+
+    .site-menu {
+        /* SET COLOR TO TOGGLE MENU */
+        background-color: var(--color-togglemenu-bg);
+        color: var(--color-togglemenu-text);
+
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 50;
+        width: 100%;
+        min-height: 100svh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 3vw;
+        transition: .4s all ease-out;
+
+        a {
+            color: var(--color-togglemenu-text);
+            padding: 2vh 2vw;
+        }
+
+    }
+
+    &[data-menustate="open"] {
+
+        /* CHANGE COLOR TO TOGGLE MENU COLORS */
+        --color-siteheader-a: var(--color-togglemenu-text);
+
+        /* SET MENU BUTTON TO FIXED WHEN MENU IS OPEN */
+        .site-menu-button {
+            position: fixed;
+            z-index: 100;
+        }
+
+        /* SHOW THE SITE MENU WHEN OPEN */
+        .site-menu {
+            transform: translateX(0);
+        }
+
+        /* ANIMATE THE NAVICON / HAMBURGER TO AN X */
+        .site-menu-button svg {
+
+            .simple-navicon-top {
+                /* transform: rotate(45deg); */
+                rotate: 45deg;
+                translate: -21% 25%;
+            }
+
+            .simple-navicon-middle {
+                opacity: 0;
+            }
+
+            .simple-navicon-bottom {
+                rotate: -45deg;
+                translate: -21% -25%;
+            }
+
+        }
+
+    }
+
+    &[data-menustate="closed"] {
+
+        /* MOVE THE SIDE MENU TO THE RIGHT WHEN CLOSED */
+        .site-menu {
+            transform: translateX(100%);
+        }
+    }
+
+    /* IF TOGGLE MENU DISPLAY LOGO LEFT AND MENU RIGHT ON ALL SCREENS */
+    .site-header:has(.toggle-menu) {
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* PLACE SITE LOGO ON TOP OF DRAWER MENU */
+    .site-logo {
+        /* NOTE: LOGO WILL SCROLL AWAY - NEED TO ADD SUPPORT FOR FIXED */
+        /* position: relative; */
+        z-index: 100;
+    }
+}
+
+/* PLACE SITE HEADER ON TOP OF HERO ON LARGE SCREENS */
+.site-header.on-top-of-hero {
+
+    /* RENDER HEADER ON TOP OF HERO */
+    position: absolute;
+    width: 100%;
+
+    /* SET SITE HEADER LINK COLOR ON LARGE SCREENS */
+
+    --color-siteheader-a: var(--color-hero--black);
+
+    a {
+        color: var(--color-siteheader-a);
+    }
+
+    /* ADD MORE SPAGE ON TOP FOR THE ABSOLUTE HEADER */
+    &+.site-main>.hero {
+        padding-top: calc(4em + var(--unit-large));
+    }
+
+}
+
+/* SECTIONS
+----------------------------------------------- */
+section {
+    padding: var(--unit-large) var(--unit-small);
+}
+
+/* HERO SECTION */
+.hero {
+    /* ADD MORE SPACE ON TOP FOR THE ABSOLUTE HEADER */
+    padding: var(--unit-large) var(--unit-small);
+
+    h1 {
+        font-size: 4em;
+        line-height: 1;
+        text-wrap: balance;
+    }
+}
+
+.page-sub .hero {
+    /* border: 10px solid yellow; */
+    padding-left: calc(3em + var(--unit-small));
+}
+
+/* SITE FOOTER
+----------------------------------------------- */
+.site-footer {
+    background-color: var(--color-sitefooter-bg);
+    color: var(--color-sitefooter-text);
+
+    /* Centering the item */
+    min-height: 80vh;
+    display: grid;
+    place-items: center;
+
+    /* ADD SOME GENERAL PADDING AROUND THE FOOTER */
+    padding: var(--unit-small);
+
+    h1,
+    h2,
+    h3 {
+        font-family: var(--font-special);
+        font-weight: normal;
+        font-size: 4.25em;
+        line-height: 0.85;
+        color: var(--color-sitefooter-headings);
+        text-align: right;
+        margin: 0;
+        padding: 0;
+    }
+
+    h5 {
+        font-family: var(--font-sans-serif);
+        font-weight: 400;
+    }
+
+    a {
+        color: var(--color-sitefooter-a);
+    }
+
+    .site-footer-nav {
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            font-size: 2em;
+            line-height: 1;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        li {
+            min-height: 1.5em;
+            display: grid;
+            align-items: center;
+        }
+    }
+
+}
+
+/* ----------------------------------------------- */
+/* UI COMPONENTS */
+/* ----------------------------------------------- */
+
+/* BUTTONS */
+.button {
+    /* SET THE BUTTON COLORS */
+    border: 1px solid var(--color-a-dark);
+    background-color: var(--color-a-dark);
+    color: white;
+
+    /* ENABLE BOX MODEL STYLING */
+    display: inline-block;
+    padding: var(--unit-small);
+    margin: var(--unit-small) 0;
+
+    /* GET RID OF THE UNDERLINE */
+    text-decoration: none;
+
+    +.button {
+        margin-left: var(--unit-small);
+    }
+
+    &:hover {
+        color: #fff;
+        background-color: var(--color-a-darker);
+        border-color: var(--color-a-darker);
+
+    }
+
+    /* LIGHT BUTTON VARIANT */
+    &.light {
+        border-color: var(--color-a-light);
+        background-color: var(--color-a-light);
+        color: var(--color-a-darker);
+
+        &:hover {
+            border-color: var(--color-a-lighter);
+            background-color: var(--color-a-lighter);
+        }
+    }
+
+}
+
+/* SIMPLE CARDS */
+.centered-card-group {
+
+    display: flex;
+    justify-content: center;
+    gap: var(--unit-small);
+
+    .centered-card {
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: var(--unit-small);
+    }
+
+}
+
+
+/* ----------------------------------------------- */
+/* ANIMATION */
+/* ----------------------------------------------- */
+
+/* ADD SUPPORT FOR SMOOTH SCROLLING */
+html {
+    scroll-behavior: smooth;
+}
+
+/* SCROLL TRIGGERED ANIMATION
+ * corresponding with JS
+ */
+
+.observe-me {
+    opacity: 0;
+    transition: all .75s ease-out 0.5s;
+
+    &[data-viewstate="active"] {
+        opacity: 1;
+    }
+}
+
+.animate-from-top {
+    translate: 0 -10px;
+
+    &[data-viewstate="active"] {
+        translate: 0 0;
+    }
+}
+
+.animate-from-upperleft01 {
+    translate: -20px -70px;
+
+    &[data-viewstate="active"] {
+        translate: 0 0;
+    }
+}
+
+.animate-from-upperleft02 {
+    translate: -20px -30px;
+    transition-delay: .25s;
+
+    &[data-viewstate="active"] {
+        translate: 0 0;
+    }
+}
+
+.animate-from-upperright01 {
+    translate: 20px -30px;
+    transition-delay: .25s;
+
+    &[data-viewstate="active"] {
+        translate: 0 0;
+    }
+}
+
+.animate-from-right {
+    translate: 20px 0;
+    transition-delay: .25s;
+
+    &[data-viewstate="active"] {
+        translate: 0 0;
+    }
+}
+
+.animate-from-left {
+    translate: -20px 0;
+    transition-delay: .5s;
+
+    &[data-viewstate="active"] {
+        translate: 0 0;
+    }
+}
+
+.animate-from-bottomleft {
+    translate: -20px 50px;
+    transition-delay: .5s;
+
+    &[data-viewstate="active"] {
+        translate: 0 0;
+    }
+}
+
+.animate-from-bottomright01 {
+    translate: 20px 50px;
+    transition-delay: .5s;
+
+    &[data-viewstate="active"] {
+        translate: 0 0;
+    }
+}
+
+.animate-from-bottom {
+    translate: 0 20px;
+    transition-delay: .5s;
+
+    &[data-viewstate="active"] {
+        translate: 0 0;
+    }
+}
+
+
+/* ----------------------------------------------- */
+/* CUSTOM STYLING */
+/* ----------------------------------------------- */
+
+/* CUSTOM TYPEFACE FOR HEADER */
+.site-header h1 {
+    font-family: 'corleone due';
+    font-weight: normal;
+}
+
+.site-header ul {
+    text-transform: uppercase;
+    line-height: 1;
+
+    li {
+        display: grid;
+        align-items: center;
+    }
+}
+
+/* HOME
+-----------------------------------------------
+ * Home animated nav
+ * Grid system
+ * ----------------------------------------------- */
+
+.red-bg {
+    background-color: var(--color-primary);
+    font-family: var(--font-sans-serif);
+
+    span {
+        text-transform: uppercase;
+        display: block;
+        text-align: right;
+        font-size: 0.75em;
+    }
+
+    span.span-about {
+        rotate: 30deg;
+        translate: 15% 200%;
+    }
+
+    span.span-works {
+        rotate: -30deg;
+        translate: 10% 100%;
+    }
+
+    span.span-timeline {
+        rotate: 30deg;
+        translate: 5% 150%;
+    }
+
+    &:hover {
+        /* font-family: var(--font-special); */
+        /* line-height: .9; */
+        color: var(--color-white);
+    }
+}
+
+.red-bg:hover {
+    transform: scale(1.1);
+    transition-duration: .25s;
+    /* QUESTION: what would be the best way to move the surrounding elements? */
+}
+
+.bierut {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.home-hero-grid {
+    display: grid;
+    min-height: 80svh;
+    list-style: none;
+    grid-template-columns: 3.5% 4.5% 7% 2% 28% 7% 8% 15% 25%;
+    grid-template-rows: 30% 2% 2% 18% 24% 2% 10% 12%;
+}
+
+/* not able to control */
+/* .home-hero-grid:has(.mid01:hover) {
+    #top01.observe-me.animate-from-upperleft01, .observe-me.animate-from-upperleft02, .observe-me.animate-from-bottomleft {
+        scale: .9;
+        transition: scale .1s linear 0 !important;
+        border: 3px solid yellow;
+    }
+} */
+
+.home-hero-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.home-hero-grid-item.red-bg {
+    /*  NOTE: grid items read children's size and not parent  */
+    margin: 1vh 1vw;
+    padding: 2vh 2vw;
+}
+
+.top01 {
+    background-color: var(--color-red);
+    grid-column: 1 / 5;
+    grid-row: 1 / 5;
+    clip-path: polygon(0 0, 93% 0, 100% 83%, 13% 92%);
+}
+
+.top02 {
+    grid-column: 4 / 10;
+    grid-row: 1 / 1;
+    clip-path: polygon(0 0, 97% 0, 100% 80%, 10% 100%);
+    width: 90%;
+    text-align: right;
+    font-family: var(--font-special);
+    font-size: 9svh;
+    line-height: 0.9;
+    font-weight: normal;
+    color: var(--color-light-hero-headings);
+    /* QUESTION: what is the best way to adjust the layout of the text?  */
+}
+
+.mid01 {
+    grid-column: 2 / 5;
+    grid-row: 5 / 6;
+    clip-path: polygon(0 5%, 76% 0, 100% 91%, 9% 100%);
+    width: 110%;
+    height: 80%;
+}
+
+.mid02 {
+    grid-column: 5 / 7;
+    grid-row: 4 / 9;
+    clip-path: polygon(0% 0%, 69% 0, 75% 37%, 94% 40%, 100% 100%, 16% 100%);
+}
+
+.mid03 {
+    grid-column: 6 / 8;
+    grid-row: 3 / 5;
+    clip-path: polygon(0 4%, 92% 0, 100% 100%, 14% 100%);
+    height: 120%;
+}
+
+.mid04 {
+    grid-column: 8 / 10;
+    grid-row: 2 / 8;
+    clip-path: polygon(1% 0%, 89% 0, 100% 100%, 42% 100%, 38% 70%, 14% 70%);
+}
+
+.btm01 {
+    grid-column: 3 / 5;
+    grid-row: 6 / 9;
+    clip-path: polygon(0 0, 91% 1%, 100% 100%, 9% 100%);
+    width: 140%;
+}
+
+.btm02 {
+    grid-column: 7 / 9;
+    grid-row: 7 / 9;
+    clip-path: polygon(0% 0%, 85% 0, 92% 100%, 10% 100%);
+}
+
+.btm03 {
+    color: black;
+    grid-column: 9 / 10;
+    grid-row: 8 / 9;
+    rotate: 4deg;
+}
+
+
+.bierut {
+    clip-path: polygon(0 20%, 100% 0, 100% 50%, 3% 100%);
+}
+
+#about .row>* {
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
+
+#about h2 {
+    text-transform: uppercase;
+}
+
+
+/* CUSTOM STYLING FOR ALL THE SUBPAGES
+-----------------------------------------------
+ * Shared styling
+ * Rotated header
+ * Credits for artowrk
+ * ----------------------------------------------- */
+
+.rotated-header {
+    --site-header-height: 60px;
+    background-color: transparent;
+    height: var(--site-header-height);
+    width: 100svh;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    rotate: 90deg;
+    transform-origin: left top;
+    translate: var(--site-header-height) 0;
+    z-index: 100;
+}
+
+.site-header ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+
+.site-header li {
+    margin-left: 1em;
+    min-width: 180px;
+    text-align: center;
+}
+
+.sub-home-hero h2 {
+    text-transform: uppercase;
+}
+
+.credit {
+    font-size: 75%;
+    font-family: var(--font-sans-serif);
+    font-weight: 400;
+}
+
+/* SUBPAGE: SELECTED WORKS
+ * ----------------------------------------------- */
+
+ /* QUESTION: the header is pushing out the image what can i do? */
+.page-works .hero {
+    position: relative;
+}
+
+.page-works .text-wrapper {
+    position: absolute;
+    top: 35%;
+    left: 27%;
+    width: 30%;
+}
+
+/* .hero:has(.sub-home-hero) {
+    padding: 0;
+} */
+
+.works-cca,
+.works-sentinel,
+.works-jazz,
+.works-books {
+    /* Centering the child (row): sections are the grandparents */
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+
+    /* Centering the columns(grandchild) */
+    .row {
+        align-items: center;
+    }
+}
+
+.works-sentinel,
+.works-books {
+    background-color: var(--color-dark-bg);
+    /* color: var(--color-white); */
+
+    h1,
+    h2,
+    h3,
+    h4,
+    p {
+        color: var(--color-white);
+    }
+}
+
+.works-jazz {
+    background-color: var(--color-tertiary);
+}
+
+/* SUBPAGE: TIMELINE
+----------------------------------------------- */
+/* QUESTION: (1) how should I add json? (2) what would be the best way to layout the images  */
+
+.page-timeline header a {
+    color: var(--color-white);
+}
+
+.page-timeline .hero {
+    height: 100svh;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    /* padding: auto; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.page-timeline .hero h2 {
+    font-family: var(--font-special);
+    font-weight: normal;
+    font-size: 3em;
+    line-height: 0.9;
+}
+
+.puppetmaster {
+    margin-inline: auto;
+}
+
+.page-timeline .site-menu {
+    color: var(--color-white);
+}
+
+/* TIMELINE */
+#timeline ul {
+    padding: 50px 0;
+}
+
+/* this is the line */
+#timeline ul li {
+    list-style: none;
+    position: relative;
+
+    /* this is the width of center line */
+    width: 2px;
+
+    margin: 0 auto;
+    padding-top: 3em;
+    background-color: var(--color-black);
+}
+
+/* elipse on the timeline line */
+#timeline ul li::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+
+    /*  this vizualize the elipse  */
+    background-color: inherit;
+    z-index: 1;
+}
+
+#timeline ul li div {
+    /*  border: 2px solid blue; */
+    position: relative;
+    bottom: 0;
+    width: 400px;
+    padding: 1em;
+    background: var(--color-primary);
+}
+
+/* positioning for 吹き出しの出っ張ってる部分 */
+#timeline ul li div::before {
+    content: "";
+    position: absolute;
+    bottom: 7px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+#timeline ul li:nth-child(odd) div {
+    left: 45px;
+}
+
+/* 吹き出しの出っ張ってる部分、oddのみ */
+#timeline ul li:nth-child(odd) div::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent var(--color-primary) transparent transparent;
+}
+
+#timeline ul li:nth-child(even) div {
+    left: -439px;
+}
+
+/* 吹き出しの出っ張ってる部分、evenのみ */
+#timeline ul li:nth-child(even) div::before {
+    right: -15px;
+    border-width: 8px 0 8px 16px;
+    border-color: transparent transparent transparent var(--color-primary);
+}
+
+time {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 0.2em;
+}
+
+/* Animated background/map */
+
+#timeline,
+.event {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .event {
+        /* margin: 0;
+        padding: 0 0; */
+        /* padding: 50vh 6em; */
+        /* min-height: 110svh; */
+        /* border: 1px solid green; */
+        /* margin-top: 50vh; */
+        /* margin-bottom: 60vh; */
+
+        /* Margin triggers the animation when there is no image: margin spaces out */
+        margin: 70vh 0;
+
+    }
+
+    .event00 {
+     margin: 0;
+     padding: 0 0 20vh 0;   
+    }
+
+    .map {
+        background-image: url(../page-timeline/img/fujita-map.svg);
+        background-repeat: no-repeat;
+
+        /*  this is the default animation starting point    */
+        --background-size: 100%;
+        --background-position: 50% 50%;
+        background-size: var(--background-size);
+        background-position: var(--background-position);
+        height: 100svh;
+        /* background-color: red; */
+
+        /*  div is fixed to the parent    */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+        transition: all 2s ease-out 0.5s;
+        /* REFACTOR: consider intersection observer options. */
+    }
+}
+
+/* SCROLL TRIGGERED ANIMATION */
+
+/* QUESTION: custom property? */
+#timeline:has(.event00[data-viewstate="active"]) .map {
+    --background-size: 100%;
+    --background-position: 50% 50%;
+}
+
+#timeline:has(.event01[data-viewstate="active"]) .map {
+    --background-size: 800%;
+    --background-position: 37% 55%;
+}
+
+#timeline:has(.event02[data-viewstate="active"]) .map {
+    --background-size: 400%;
+    --background-position: 48% 48%;
+}
+
+#timeline:has(.event03[data-viewstate="active"]) .map {
+    --background-size: 600%;
+    --background-position: 52% 42%;
+}
+
+#timeline:has(.event04[data-viewstate="active"]) .map {
+    --background-size: 700%;
+    --background-position: 90% 42%;
+}
+
+#timeline:has(.event05[data-viewstate="active"]) .map {
+    --background-size: 600%;
+    --background-position: 62% 44%;
+}
+
+
+/* Media queries for timeline
+-------------------------------------------------- */
+
+@media screen and (max-width: 900px) {
+    #timeline ul li div {
+        width: 250px;
+    }
+
+    #timeline ul li:nth-child(even) div {
+        left: -289px;
+        /*250+45-6*/
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #timeline ul li {
+        margin-left: 20px;
+    }
+
+    #timeline ul li div {
+        width: calc(100vw - 91px);
+    }
+
+    #timeline ul li:nth-child(even) div {
+        left: 45px;
+    }
+
+    #timeline ul li:nth-child(even) div::before {
+        left: -15px;
+        border-width: 8px 16px 8px 0;
+        border-color: transparent var(--color-primary) transparent transparent;
+    }
+}
+
+
+/* DEMO ONLY */
+/* body * {
+    background-color: rgb(0 0 0 /0.05);
+    border: 1px solid rgb(0 0 0 /0.1);
+    color: rgb(0 0 0 /0.5);
+} */
+
+/* body * {
+    border: 1px solid blue;
+} */
+
+/* .home-hero-grid-item {
+    border: 2px solid blue;
+    background-color: var(--color-primary);
+} */
