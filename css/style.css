@@ -1,4 +1,3 @@
-
 /* -----------------------------------------------
 --------------------------------------------------
 
@@ -47,8 +46,13 @@ CSS TABLE OF CONTENTS
 /* ----------------------------------------------- */
 
 /* GLOBAL RESET */
-* { box-sizing: border-box; }
-body { margin: 0; }
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
 
 /* GLOBAL COLORS */
 html {
@@ -59,8 +63,14 @@ html {
     --my-gray: rgb(128 128 128 /1);
     --my-gray10: rgb(128 128 128 /.1);
 }
-body { background-color: var(--my-white); }
-a { color: rgb(0 0 0 /0.8); }
+
+body {
+    background-color: var(--my-white);
+}
+
+a {
+    color: rgb(0 0 0 /0.8);
+}
 
 /* GLOBAL STRUCTURE */
 body {
@@ -71,22 +81,28 @@ body {
 
 /* GLOBAL TYPOGRAPHY */
 body {
-	font-family: 'DM Mono', Courier, monospace;
-	font-size: 88.75%;  /* 14pt */
-	line-height: 1.4; 
+    font-family: 'DM Mono', Courier, monospace;
+    font-size: 88.75%;
+    /* 14pt */
+    line-height: 1.4;
     font-weight: 300;
-	color: rgb(0 0 0 /0.8);
+    color: rgb(0 0 0 /0.8);
 }
 
 /* HEADGINGS */
-h1, h2, h3, h4, dt {
+h1,
+h2,
+h3,
+h4,
+dt {
     margin: .5em 0;
     font-weight: normal;
     font-style: normal;
 }
 
 
-h1, h2 {
+h1,
+h2 {
     font-family: 'pp_editorial_oldregular', Georgia, sans-serif;
 }
 
@@ -94,16 +110,19 @@ h3 {
     font-family: 'pp_editorial_olditalic', Georgia, sans-serif;
 }
 
-h4, dt {
+h4,
+dt {
     font-family: 'pp_editorial_ultrabold', Georgia, sans-serif;
 }
 
 /* PARAGRAPHS */
-p { max-width: 66ch; }
+p {
+    max-width: 66ch;
+}
 
 /* LINK */
 a {
-	text-decoration: none;
+    text-decoration: none;
     position: relative;
     text-decoration: none;
 }
@@ -120,8 +139,8 @@ a::before {
     transform-origin: right;
     transform: scaleX(0);
     transition: transform .3s ease-in-out;
-  }
-  
+}
+
 a:hover::before {
     transform-origin: left;
     transform: scaleX(1);
@@ -161,7 +180,8 @@ dd {
 }
 
 /* GENERAL LISTS */
-ul, ol {
+ul,
+ol {
     padding-left: 1.5em;
 }
 
@@ -176,7 +196,7 @@ dd {
 /* SITE HEADER, ID AND SITE-NAV
 /* ----------------------------------------------- */
 
-header { 
+header {
     background-color: var(--my-black);
     padding: 1em;
     display: grid;
@@ -203,10 +223,154 @@ header {
     text-decoration: none;
     color: var(--my-green);
 }
-  
+
+/* TOGGLE MENU */
+/*HIDE MENU BUTTON IF NOT USING TOGGLE MENU  */
+.site-menu-button {
+    display: none;
+}
+
+.toggle-menu {
+
+    --color-togglemenu-bg: var(--my-black);
+    --color-togglemenu-text: var(--my-white);
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+
+    /* SHOW MENU BUTTON IF USING TOGGLE NAV */
+    .site-menu-button {
+        display: block;
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+        padding: .5em;
+        position: relative;
+        z-index: 100;
+        transition: .4s all ease-out;
+
+        /* RESET THE FONT SIZE */
+        font-size: inherit;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        /* ADD SUPPORT FOR NAVICON/HAMBURGER ICON */
+        &:has(svg) {
+
+            /* VERTICALLY ALIGN THE MENU TEXT W ICON */
+            display: flex;
+            align-content: center;
+            gap: var(--unit-small);
+
+            /* REMOVE BORDER */
+            border: none;
+            
+            /* SET TSVG COLOR */
+            svg {
+                fill: var(--color-siteheader-a);
+            }
+
+            /* ADD SUPPORT FOR SVG ANIMATION (">" MEANS "IMEDIATE CHILD") */
+            svg > * {
+                transition: .2s all ease-out;
+                transform-origin: center;
+            }
+
+        }
+    }
+
+    .site-menu {
+        /* SET COLOR TO TOGGLE MENU */
+        background-color: var(--my-green);
+        color: var(--my-gray);
+
+        position: fixed;
+        top: 0;
+        right: 0; 
+        z-index: 50;
+        width: 100%;
+        min-height: 100svh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 3vw;
+        transition: .4s all ease-out;
+
+        a {
+            color: var(--color-togglemenu-text);
+            padding: 2vh 2vw;
+        }
+
+    }
+
+    &[data-menustate="open"] {
+
+        /* CHANGE COLOR TO TOGGLE MENU COLORS */
+        --color-siteheader-a: var(--color-togglemenu-text);
+
+        /* SET MENU BUTTON TO FIXED WHEN MENU IS OPEN */
+        .site-menu-button {
+            position: fixed;
+            z-index: 100;
+        }
+
+        /* SHOW THE SITE MENU WHEN OPEN */
+        .site-menu {
+            transform: translateX(0);
+        }
+
+        /* ANIMATE THE NAVICON / HAMBURGER TO AN X */
+        .site-menu-button svg {
+
+            .simple-navicon-top {
+                /* transform: rotate(45deg); */
+                rotate: 45deg;
+                translate: -21% 25%;
+            }
+
+            .simple-navicon-middle {
+                opacity: 0;
+            }
+
+            .simple-navicon-bottom {
+                rotate: -45deg;
+                translate: -21% -25%;
+            }
+
+        }
+
+    }
+
+    &[data-menustate="closed"] {
+
+        /* MOVE THE SIDE MENU TO THE RIGHT WHEN CLOSED */
+        .site-menu {
+            transform: translateX(100%);
+        }
+    }
+
+    /* IF TOGGLE MENU DISPLAY LOGO LEFT AND MENU RIGHT ON ALL SCREENS */
+    .site-header:has(.toggle-menu) {
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* PLACE SITE LOGO ON TOP OF DRAWER MENU */
+    .site-logo {
+    /* NOTE: LOGO WILL SCROLL AWAY - NEED TO ADD SUPPORT FOR FIXED */
+    /* position: relative; */
+    z-index: 100;
+    }
+}
+
+
 /* MAIN */
 main {
-    background-color: var(--my-off-white);  
+    background-color: var(--my-off-white);
 }
 
 section {
@@ -254,7 +418,7 @@ footer {
 
 .hero h2 {
     font-size: 6em;
-    color: var(--my-white);  
+    color: var(--my-white);
     text-shadow: 0em 0em 0.2em rgb(0 0 0 /.8);
     line-height: 1;
     text-transform: uppercase;
@@ -268,10 +432,18 @@ footer {
 }
 
 @keyframes animation-h2 {
-    0%    { opacity: 0;
-            transform: translateY(-0.5em);}
-    10%   { opacity: 0;}
-    100% { opacity: 1;}
+    0% {
+        opacity: 0;
+        transform: translateY(-0.5em);
+    }
+
+    10% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .hero p {
@@ -286,10 +458,18 @@ footer {
 }
 
 @keyframes animation-p {
-    0%    { opacity: 0;
-            transform: translateY(0.5em);}
-    10%   { opacity: 0;}
-    100% { opacity: 1;}
+    0% {
+        opacity: 0;
+        transform: translateY(0.5em);
+    }
+
+    10% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 
@@ -302,6 +482,7 @@ footer {
     background-position: center;
     padding: 20vh 1em;
 }
+
 .page-home header {
     background-color: transparent;
     position: absolute;
@@ -312,7 +493,7 @@ footer {
     background-color: rgb(0 0 0 /1);
 }
 
-.page-sub .hero{
+.page-sub .hero {
     background-color: rgb(0 0 0 /0.5);
     color: rgb(0 0 0 /0.8);
 }
@@ -355,9 +536,9 @@ footer {
     margin: 0 auto;
 }
 
- .courses {
+.courses {
     padding: 4em 1em 7em 1em;
-    display: grid; 
+    display: grid;
     align-items: center;
 }
 
@@ -371,7 +552,8 @@ And how can I make it transtion? */
     box-shadow: 0 0 12px 0 var(--my-green);
 }
 
-.courses h3, .courses a {
+.courses h3,
+.courses a {
     color: var(--my-white);
     text-align: center;
 }
@@ -379,21 +561,22 @@ And how can I make it transtion? */
 .cards li {
     color: var(--my-black);
 }
+
 .courses .cards span {
     display: block;
     font-size: 2em;
 }
 
 /* COURSE PAGES WITH MULTIPLE PROJECT LISTS */
-.coursework{
-padding: 3em 1em;
-display: flex;
-justify-content: center;
-flex-wrap: wrap;
+.coursework {
+    padding: 3em 1em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .project {
-margin: 2em;
+    margin: 2em;
 }
 
 /* ----------------------------------------------- */
@@ -423,10 +606,10 @@ body {
 .container {
     max-width: 1000px;
     margin: 0 auto;
-    }
-    
+}
+
 section {
-padding: 3em 1em;
+    padding: 3em 1em;
 }
 
 /* GRID */
@@ -470,6 +653,19 @@ padding: 3em 1em;
 
     .three-fourths {
         grid-column: auto / span 9;
+    }
+
+    /* Centered columns */
+    .one-half.centered {
+        grid-column: 4 / span 6;
+    }
+
+    .one-third.centered {
+        grid-column: 5 / span 4;
+    }
+
+    .two-thirds.centered {
+        grid-column: 3 / span 8;
     }
 
     /* Pushes: which column to start */
@@ -540,12 +736,12 @@ padding: 3em 1em;
 }
 
 @media (min-width: 768px) {
-    .two-col-sidebar{
+    .two-col-sidebar {
         display: grid;
         grid-template-columns: 20em auto;
     }
 
-    .two-col-sidebar aside{
+    .two-col-sidebar aside {
         border-right: 1px solid rgb(0 0 0 /0.1);
         margin: 0 3em 2em 0;
         padding: .3em 2em 0 0;
@@ -571,10 +767,11 @@ pre code {
     padding: 1em 3em;
     margin-bottom: 1em;
 }
+
 /* NOTES PAGE SCCROLLBAR FIX FOR GISTS */
 @media (min-width: 768px) and (max-width: 910px) {
     .gist {
-    max-width: 450px;
+        max-width: 450px;
     }
 }
 
