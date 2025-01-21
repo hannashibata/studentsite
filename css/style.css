@@ -60,6 +60,7 @@ html {
     --my-magenta: rgb(252, 15, 192, 1);
     --my-green: rgb(0 255 0 /1);
     --my-black: rgb(10 10 10 /1);
+    --my-black70: rgb(10 10 10 /.7);
     --my-gray: rgb(128 128 128 /1);
     --my-gray10: rgb(128 128 128 /.1);
 }
@@ -69,7 +70,7 @@ body {
 }
 
 a {
-    color: rgb(0 0 0 /0.8);
+    color: var(--my-black);
 }
 
 /* GLOBAL STRUCTURE */
@@ -86,7 +87,7 @@ body {
     /* 14pt */
     line-height: 1.4;
     font-weight: 300;
-    color: rgb(0 0 0 /0.8);
+    color: var(--my-black70);
 }
 
 /* HEADGINGS */
@@ -125,6 +126,7 @@ a {
     text-decoration: none;
     position: relative;
     text-decoration: none;
+    color: var(--my-black);
 }
 
 a::before {
